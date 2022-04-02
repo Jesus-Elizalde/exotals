@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import * as sessionActions from "./store/session";
 
 import NavBar from "./components/NavBar";
+import WelcomeContainer from "./components/WelcomeContainer";
 
 import PropagateLoader from "react-spinners/PropagateLoader";
 
@@ -37,7 +38,12 @@ function App() {
         <>
           <NavBar isLoaded={isLoaded} />
           <Switch>
-            <Route exact path="/"></Route>
+            <Route exact path="/welcome">
+              <WelcomeContainer />
+            </Route>
+            <Route exact path="/home">
+              <p>landing</p>
+            </Route>
           </Switch>
         </>
       )}
