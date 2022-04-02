@@ -1,0 +1,26 @@
+:root {
+  --bg: grey;
+  --bg-accent: green;
+  --text-color: white;
+  --nav-size: 60px;
+  --border: 1px spild grey;
+  --speed: 500ms;
+}
+
+body {
+  margin: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: navajowhite;
+  text-decoration: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}

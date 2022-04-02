@@ -5,6 +5,11 @@ import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 
+import NavBar from "./components/NavBar";
+import NavItem from "./components/NavBar/NavItem";
+
+import "./App.css";
+
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -12,18 +17,20 @@ function App() {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);
 
-  return (
-    <>
-      <Navigation isLoaded={isLoaded} />
-      {isLoaded && (
-        <Switch>
-          <Route path="/signup">
-            <SignupFormPage />
-          </Route>
-        </Switch>
-      )}
-    </>
-  );
+  // return (
+  //   <>
+  //     <Navigation isLoaded={isLoaded} />
+  //     {isLoaded && (
+  //       <Switch>
+  //         <Route path="/signup">
+  //           <SignupFormPage />
+  //         </Route>
+  //       </Switch>
+  //     )}
+  //   </>
+  // );
+
+  return <NavBar />;
 }
 
 export default App;
