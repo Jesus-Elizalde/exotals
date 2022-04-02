@@ -1,10 +1,11 @@
 :root {
-  --bg: grey;
+  --bg: white;
   --bg-accent: green;
   --text-color: white;
-  --nav-size: 60px;
-  --border: 1px spild grey;
+  --nav-size: 95px;
+  --border: 1px solid lightgrey;
   --speed: 500ms;
+  --border-radius: 5px;
 }
 
 body {
