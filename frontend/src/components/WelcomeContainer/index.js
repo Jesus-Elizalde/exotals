@@ -9,9 +9,12 @@ import "./Welcome.css";
 function WelcomeContainer() {
   return (
     <div className="welcome-container">
-      <DreamBox />
-      <ImgBox />
-      <TripBox />
+      <div className="welomeboxes">
+        <DreamBox />
+        <ImgBox />
+        <TripBox />
+      </div>
+      <div className="welcomebackground"></div>
     </div>
   );
 }
