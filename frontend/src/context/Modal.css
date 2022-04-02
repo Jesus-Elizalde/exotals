@@ -24,5 +24,19 @@
   /* border: 5px solid black; */
   border-radius: 5%;
   width: 560;
-  height: 412px;
+  height: 350px;
+}
+
+.form-container-model {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 450px;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input-model {
+  display: flex;
+  justify-content: space-between;
 }

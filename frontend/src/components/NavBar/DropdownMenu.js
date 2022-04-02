@@ -13,7 +13,7 @@ function DropdownMenu() {
         <>
           <DropdownItem text="Login" />
           <DropdownItem text="Sign Up" />
-          <DropdownItem text="Demo User" />
+          <DropdownItem text="Demo Login" />
         </>
       ) : (
         <>

@@ -35,40 +35,36 @@ function SignUpPage() {
             <li key={idx}>{error}</li>
           ))}
         </ul>
-        <div>
-          <label>Username</label>
+        <div className="form-input-model">
+          <label>Username:</label>
           <input
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            required
           />
         </div>
-        <div>
-          <label>Email</label>
+        <div className="form-input-model">
+          <label>Email:</label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
           />
         </div>
-        <div>
-          <label>Password</label>
+        <div className="form-input-model">
+          <label>Password:</label>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
           />
         </div>
-        <div>
-          <label>Confirm Password</label>
+        <div className="form-input-model">
+          <label>Confirm Password:</label>
           <input
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            required
           />
         </div>
         <button type="submit">Sign Up</button>

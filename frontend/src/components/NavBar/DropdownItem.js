@@ -49,6 +49,24 @@ function DropdownItem({ text }) {
         </a>
       </>
     );
+  } else if (text === "Demo Login") {
+    content = (
+      <>
+        <a
+          className="menu-item"
+          onClick={() =>
+            dispatch(
+              sessionActions.login({
+                credential: "Demo-User",
+                password: "password",
+              })
+            )
+          }
+        >
+          {text}
+        </a>
+      </>
+    );
   } else {
     content = <a className="menu-item nonfuction">{text}</a>;
   }
