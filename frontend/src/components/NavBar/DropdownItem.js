@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 
+import { useDispatch } from "react-redux";
+import * as sessionActions from "../../store/session";
+
 import { Modal } from "../../context/Modal";
 import LoginForm from "../LoginFormModal/LoginForm";
 import SignUpPage from "../SignupFormModal/SignupForm";
 
 function DropdownItem({ text }) {
   const [showModal, setShowModal] = useState(false);
+  const dispatch = useDispatch();
+
   let content = <p>not working</p>;
   if (text === "Login") {
     content = (
@@ -20,8 +25,7 @@ function DropdownItem({ text }) {
         )}
       </>
     );
-  }
-  if (text === "Sign Up") {
+  } else if (text === "Sign Up") {
     content = (
       <>
         <a className="menu-item" onClick={() => setShowModal(true)}>
@@ -34,16 +38,21 @@ function DropdownItem({ text }) {
         )}
       </>
     );
-  }
-  if (text === "Demo User") {
+  } else if (text === "Sign Out") {
     content = (
       <>
-        <a className="menu-item" onClick={() => setShowModal(true)}>
+        <a
+          className="menu-item"
+          onClick={() => dispatch(sessionActions.logout())}
+        >
           {text}
         </a>
       </>
     );
+  } else {
+    content = <a className="menu-item nonfuction">{text}</a>;
   }
+
   return content;
 }
 

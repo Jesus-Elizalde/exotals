@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import DropdownMenu from "./DropdownMenu";
 
-function NavItem({ icon }) {
+function NavItem({ icon, isLoaded }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -10,7 +10,7 @@ function NavItem({ icon }) {
       <a className="icon-button" onClick={() => setOpen(!open)}>
         {icon}
       </a>
-      {open && <DropdownMenu />}
+      {open && <DropdownMenu isLoaded={isLoaded} />}
     </li>
   );
 }

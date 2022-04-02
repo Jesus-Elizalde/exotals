@@ -63,3 +63,11 @@
 .menu-item:hover {
   background-color: lightgray;
 }
+
+.nonfuction {
+  color: red;
+  transition: none;
+}
+.nonfuction:hover {
+  background-color: transparent;
+}

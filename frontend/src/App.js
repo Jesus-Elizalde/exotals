@@ -30,7 +30,7 @@ function App() {
   //   </>
   // );
 
-  return <NavBar />;
+  return <NavBar isLoaded={isLoaded} />;
 }
 
 export default App;
