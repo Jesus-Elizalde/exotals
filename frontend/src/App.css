@@ -25,3 +25,10 @@ a {
   display: flex;
   flex-direction: column;
 }
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

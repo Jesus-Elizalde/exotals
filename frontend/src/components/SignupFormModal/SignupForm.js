@@ -27,7 +27,7 @@ function SignUpPage() {
   };
 
   return (
-    <div>
+    <div className="form-container-model">
       <h2>Sign Up</h2>{" "}
       <form onSubmit={handleSubmit}>
         <ul>

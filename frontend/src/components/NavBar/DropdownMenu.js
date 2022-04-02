@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 import DropdownItem from "./DropdownItem";
 
-function DropdownMenu({ isloaded }) {
+function DropdownMenu() {
   const sessionUser = useSelector((state) => state.session.user);
 
   return (
