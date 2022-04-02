@@ -5,6 +5,8 @@ import ProfileButton from "./ProfileButton";
 import LoginFormModal from "../LoginFormModal";
 import SignupModal from "../SignupFormModal";
 
+import "./Navigation.css";
+
 // import "./Navigation.css";
 
 function Navigation({ isLoaded }) {
@@ -23,14 +25,12 @@ function Navigation({ isLoaded }) {
   }
 
   return (
-    <ul>
-      <li>
-        <NavLink exact to="/">
-          Exotals
-        </NavLink>
-        {isLoaded && sessionLinks}
-      </li>
-    </ul>
+    <div className="nav_container">
+      <NavLink exact to="/">
+        Exotals
+      </NavLink>
+      <div className="profile_button">{isLoaded && sessionLinks}</div>
+    </div>
   );
 }
 
