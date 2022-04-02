@@ -20,6 +20,7 @@ function DropdownMenu() {
           <DropdownItem text={sessionUser?.username} />
           <DropdownItem text={sessionUser?.email} />
           <DropdownItem text="Sign Out" />
+          <DropdownItem text="Rent Your Car" />
         </>
       )}
     </div>

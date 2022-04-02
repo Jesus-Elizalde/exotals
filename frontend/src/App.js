@@ -6,6 +6,7 @@ import * as sessionActions from "./store/session";
 
 import NavBar from "./components/NavBar";
 import WelcomeContainer from "./components/WelcomeContainer";
+import Footer from "./components/Footer/Footer";
 
 import PropagateLoader from "react-spinners/PropagateLoader";
 
@@ -38,13 +39,17 @@ function App() {
         <>
           <NavBar isLoaded={isLoaded} />
           <Switch>
-            <Route exact path="/welcome">
+            <Route exact path="/">
+              <p>landing</p>
+            </Route>
+            <Route path="/welcome">
               <WelcomeContainer />
             </Route>
-            <Route exact path="/home">
+            <Route path="/home">
               <p>landing</p>
             </Route>
           </Switch>
+          <Footer />
         </>
       )}
     </>
