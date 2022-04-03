@@ -3,10 +3,12 @@ import { useDispatch } from "react-redux";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 import * as sessionActions from "./store/session";
+import * as carsActions from "./store/cars";
 
 import NavBar from "./components/NavBar";
 import Loading from "./components/Loading";
 import WelcomeContainer from "./components/WelcomeContainer";
+import HomeContainer from "./components/HomeContainer";
 import Footer from "./components/Footer/Footer";
 
 import "./App.css";
@@ -19,6 +21,7 @@ function App() {
 
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
+    dispatch(carsActions.getAllCars());
   }, [dispatch]);
 
   useEffect(() => {
@@ -43,7 +46,7 @@ function App() {
               <WelcomeContainer />
             </Route>
             <Route path="/home">
-              <p>landing</p>
+              <HomeContainer />
             </Route>
             <Route>
               <p>page not found</p>

@@ -1,8 +1,8 @@
 import React from "react";
 
-function TripItem({ test }) {
+function TripItem() {
   return (
-    <div className="tripitem">
+    <div className="trip">
       <p>img holder</p>
       <h2>La</h2>
       <p>testinf</p>

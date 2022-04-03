@@ -14,7 +14,7 @@ export default function NavBar({ isLoaded }) {
         {
           <>
             <li className="nav-item">
-              <a href="#" className="icon-button">
+              <a href="/" className="icon-button">
                 {<Logo />}
               </a>
             </li>
