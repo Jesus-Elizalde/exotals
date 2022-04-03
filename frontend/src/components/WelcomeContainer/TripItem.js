@@ -1,6 +1,6 @@
 import React from "react";
 
-function TripItem() {
+function TripItem({ test }) {
   return (
     <div className="tripitem">
       <p>img holder</p>
