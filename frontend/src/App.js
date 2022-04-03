@@ -5,10 +5,9 @@ import { Route, Switch } from "react-router-dom";
 import * as sessionActions from "./store/session";
 
 import NavBar from "./components/NavBar";
+import Loading from "./components/Loading";
 import WelcomeContainer from "./components/WelcomeContainer";
 import Footer from "./components/Footer/Footer";
-
-import PropagateLoader from "react-spinners/PropagateLoader";
 
 import "./App.css";
 
@@ -26,22 +25,17 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 1500);
   }, []);
 
   return (
     <>
       {loading ? (
-        <div className="loader-container">
-          <PropagateLoader size={150} color={"#123abc"} />
-        </div>
+        <Loading />
       ) : (
         <>
           <NavBar isLoaded={isLoaded} />
           <Switch>
-            <Route exact path="/">
-              <p>landing</p>
-            </Route>
             <Route path="/welcome">
               <WelcomeContainer />
             </Route>
