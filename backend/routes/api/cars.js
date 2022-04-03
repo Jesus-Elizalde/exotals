@@ -8,7 +8,9 @@ const router = express.Router();
 router.get(
   "/",
   asyncHandler(async (req, res) => {
-    const data = await db.Car.findAll();
+    const data = await db.Car.findAll({
+      include: db.Image,
+    });
     // const response = data.json();
 
     console.log(data);

@@ -12,14 +12,18 @@ function HomeContainer() {
 
   return (
     <div className="home-container">
-      {allCarsArr.map((ele) => (
-        <CarCard
-          key={ele.id}
-          city={ele.city}
-          state={ele.state}
-          price={ele.price}
-        />
-      ))}
+      {allCarsArr.map(
+        (ele, i) =>
+          ele.city && (
+            <CarCard
+              key={i}
+              city={ele.city}
+              state={ele.state}
+              price={ele.price}
+              image={ele.Images}
+            />
+          )
+      )}
     </div>
   );
 }
