@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 import * as sessionActions from "./store/session";
 
@@ -26,7 +26,7 @@ function App() {
     setTimeout(() => {
       setLoading(false);
     }, 1500);
-  }, []);
+  }, [isLoaded]);
 
   return (
     <>
@@ -36,11 +36,17 @@ function App() {
         <>
           <NavBar isLoaded={isLoaded} />
           <Switch>
+            <Route exact path="/">
+              <Redirect to="/welcome" />
+            </Route>
             <Route path="/welcome">
               <WelcomeContainer />
             </Route>
             <Route path="/home">
               <p>landing</p>
+            </Route>
+            <Route>
+              <p>page not found</p>
             </Route>
           </Switch>
           <Footer />
