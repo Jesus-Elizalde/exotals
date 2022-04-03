@@ -12,6 +12,7 @@ cityData.forEach((ele) => {
     city: ele.city,
     state: ele.state,
     country: ele.country,
+    description: `During the late 20th and early 21st century cars increased in weight due to batteries,[55] modern steel safety cages, anti-lock brakes, airbags, and "more-powerful—if more-efficient—engines"[56] and, as of 2019, typically weigh between 1 and 3 tonnes.[57] Heavier cars are safer for the driver from a crash perspective, but more dangerous for other vehicles and road users.[56] The weight of a car influences fuel consumption and performance, with more weight resulting in increased fuel consumption and decreased performance. The SmartFortwo, a small city car, weighs 750–795 kg (1,655–1,755 lb). Heavier cars include full-size cars, SUVs and extended-length SUVs like the Suburban.`,
     price: price[Math.floor(Math.random() * price.length)],
     color: colors[Math.floor(Math.random() * colors.length)],
     userId: user[Math.floor(Math.random() * user.length)],
