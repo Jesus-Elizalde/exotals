@@ -1,3 +1,8 @@
+.mycar-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .mycar-item {
   background-color: grey;
   border-radius: 10px;
@@ -5,6 +10,7 @@
   flex-direction: column;
   width: 970px;
   height: 540px;
+  margin: 10px 0px 10px 50px;
 }
 
 .mycar-item-container {
@@ -32,4 +38,10 @@
 .mcic-two {
   display: flex;
   flex-direction: column;
+}
+
+.mcic-decription-box {
+  width: 350px;
+  height: 100px;
+  overflow: scroll;
 }

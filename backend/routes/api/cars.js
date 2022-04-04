@@ -25,6 +25,10 @@ router.get(
         {
           model: db.Drivetrain,
         },
+        {
+          model: db.Model,
+          include: db.Make,
+        },
       ],
     });
     // const response = data.json();
