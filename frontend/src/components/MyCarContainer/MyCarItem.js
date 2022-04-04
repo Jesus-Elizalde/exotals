@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 
+import { useSelector } from "react-redux";
+
 function MyCarItem({ data }) {
+  const user = useSelector((state) => state.session.user);
+
   const {
+    id,
     address,
     city,
     state,
+    country,
     price,
     color,
     description,
@@ -19,7 +25,9 @@ function MyCarItem({ data }) {
   const [addressField, setAddressField] = useState(address);
   const [cityField, setCityField] = useState(city);
   const [stateField, setStateField] = useState(state);
+  const [countryField, setCountryField] = useState(country);
   const [priceField, setPriceField] = useState(price);
+  const [colorField, setColorField] = useState(color);
   const [descriptionField, setDescriptionField] = useState(description);
   const [modelField, setModelField] = useState(Model?.name);
   const [makeField, setMakeField] = useState(Model?.Make.name);
@@ -31,6 +39,20 @@ function MyCarItem({ data }) {
   const [cylinderField, setCylinderField] = useState(
     Cylinder ? Cylinder.name : "NA"
   );
+
+  const onSubmit = () => {
+    const results = {
+      id,
+      address: addressField,
+      city: cityField,
+      state: stateField,
+      country: countryField,
+      price: priceField,
+      color: colorField,
+      description: descriptionField,
+      userId: user.id,
+    };
+  };
 
   console.log(editMode);
   let content;
@@ -89,6 +111,10 @@ function MyCarItem({ data }) {
                 <p>${price} / day</p>
               </div>
               <div>
+                <h2>Color</h2>
+                <p>{color}</p>
+              </div>
+              <div>
                 <h2>Cylinder</h2>
                 <p>{Cylinder ? Cylinder.name : "NA"}</p>
               </div>
@@ -99,6 +125,10 @@ function MyCarItem({ data }) {
               <div>
                 <h2>Seats</h2>
                 <p>{Seat ? Seat.name : "NA"}</p>
+              </div>
+              <div>
+                <h2>Drivetrain</h2>
+                <p>{Drivetrain ? Drivetrain.name : "NA"}</p>
               </div>
             </div>
           </div>
@@ -191,6 +221,13 @@ function MyCarItem({ data }) {
                 ></input>
               </div>
               <div>
+                <h2>Color</h2>
+                <input
+                  value={colorField}
+                  onChange={(e) => setColorField(e.target.value)}
+                ></input>
+              </div>
+              <div>
                 <h2>Cylinder</h2>
                 {/* <p>{Cylinder ? Cylinder.name : "NA"}</p> */}
                 <select></select>
@@ -202,6 +239,11 @@ function MyCarItem({ data }) {
               </div>
               <div>
                 <h2>Seats</h2>
+                {/* <p>{Seat ? Seat.name : "NA"}</p> */}
+                <select></select>
+              </div>
+              <div>
+                <h2>Drivetrain</h2>
                 {/* <p>{Seat ? Seat.name : "NA"}</p> */}
                 <select></select>
               </div>

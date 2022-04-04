@@ -33,8 +33,14 @@ router.get(
     });
     // const response = data.json();
 
-    console.log(data);
     res.json({ data });
+  })
+);
+
+router.put(
+  "/:id",
+  asyncHandler(async (req, res) => {
+    res.json({ test: "testing" });
   })
 );
 
