@@ -3,6 +3,20 @@
   flex-direction: column;
 }
 
+.mycar-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  background-color: orange;
+  border-radius: 50%;
+  color: white;
+}
+
 .mycar-item {
   background-color: grey;
   border-radius: 10px;
