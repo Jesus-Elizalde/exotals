@@ -67,6 +67,14 @@ function DropdownItem({ text }) {
         </a>
       </>
     );
+  } else if (text === "Rent Your Car") {
+    content = (
+      <>
+        <a href="/mycar" className="menu-item">
+          {text}
+        </a>
+      </>
+    );
   } else {
     content = <a className="menu-item nonfuction">{text}</a>;
   }

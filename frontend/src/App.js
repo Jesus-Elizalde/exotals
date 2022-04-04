@@ -9,6 +9,7 @@ import NavBar from "./components/NavBar";
 import Loading from "./components/Loading";
 import WelcomeContainer from "./components/WelcomeContainer";
 import HomeContainer from "./components/HomeContainer";
+import MyCarContainer from "./components/MyCarContainer";
 import Footer from "./components/Footer/Footer";
 
 import "./App.css";
@@ -47,6 +48,9 @@ function App() {
             </Route>
             <Route path="/home">
               <HomeContainer />
+            </Route>
+            <Route path="/mycars">
+              <MyCarContainer />
             </Route>
             <Route>
               <p>page not found</p>

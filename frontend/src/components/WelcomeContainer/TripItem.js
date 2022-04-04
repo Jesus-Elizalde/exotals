@@ -2,7 +2,7 @@ import React from "react";
 
 function TripItem() {
   return (
-    <div className="trip">
+    <div className="tripitem">
       <p>img holder</p>
       <h2>La</h2>
       <p>testinf</p>
