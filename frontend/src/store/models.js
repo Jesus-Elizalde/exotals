@@ -2,7 +2,7 @@ import { csrfFetch } from "./csrf";
 
 const SET_MODEL = "model/setModels";
 
-const setMakes = (model) => {
+const setModels = (model) => {
   return {
     type: SET_MODEL,
     payload: model,
@@ -15,7 +15,7 @@ export const getAllModels = () => async (dispatch) => {
   if (response.ok) {
     const data = await response.json();
 
-    dispatch(setMakes(data));
+    dispatch(setModels(data));
     return data;
   }
 };

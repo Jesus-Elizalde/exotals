@@ -1,6 +1,6 @@
 import { csrfFetch } from "./csrf";
 
-const SET_MAKES = "makes/setCars";
+const SET_MAKES = "makes/setMakes";
 
 const setMakes = (makes) => {
   return {
