@@ -70,7 +70,7 @@ function DropdownItem({ text }) {
   } else if (text === "Rent Your Car") {
     content = (
       <>
-        <a href="/mycar" className="menu-item">
+        <a href="/mycars" className="menu-item">
           {text}
         </a>
       </>

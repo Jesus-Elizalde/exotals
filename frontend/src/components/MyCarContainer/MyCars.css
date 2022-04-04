@@ -1,0 +1,29 @@
+.mycar-item {
+  background-color: grey;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 970px;
+  height: 540px;
+}
+
+.mycar-item-container {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+.mcic-one {
+  display: flex;
+  flex-direction: column;
+}
+
+.mcic-inner-one {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mcic-img {
+  width: 275px;
+  height: 405px;
+  border: 1px solid;
+}

@@ -1,9 +1,13 @@
 import React from "react";
 
+import MyCarItem from "./MyCarItem";
+
+import "./MyCars.css";
+
 function MyCarContainer() {
   return (
     <div>
-      <h1>testing</h1>
+      <MyCarItem />
     </div>
   );
 }
