@@ -3,10 +3,14 @@ import thunk from "redux-thunk";
 
 import sessionReducer from "./session";
 import carReducer from "./cars";
+import makeReducer from "./makes";
+import modelReducer from "./models";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   cars: carReducer,
+  makes: makeReducer,
+  models: modelReducer,
 });
 
 let enhancer;
