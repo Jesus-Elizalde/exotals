@@ -9,7 +9,23 @@ router.get(
   "/",
   asyncHandler(async (req, res) => {
     const data = await db.Car.findAll({
-      include: db.Image,
+      include: [
+        {
+          model: db.Image,
+        },
+        {
+          model: db.Seat,
+        },
+        {
+          model: db.Transmisson,
+        },
+        {
+          model: db.Cylinder,
+        },
+        {
+          model: db.Drivetrain,
+        },
+      ],
     });
     // const response = data.json();
 

@@ -28,3 +28,8 @@
   height: 405px;
   border: 1px solid;
 }
+
+.mcic-two {
+  display: flex;
+  flex-direction: column;
+}
