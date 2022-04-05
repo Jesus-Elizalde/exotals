@@ -21,7 +21,11 @@ module.exports = (sequelize, DataTypes) => {
   );
   Car.associate = function (models) {
     // associations can be defined here
-    Car.hasMany(models.Image, { foreignKey: "carId" });
+    Car.hasMany(models.Image, {
+      foreignKey: "carId",
+      hooks: true,
+      onDelete: "cascade",
+    });
     Car.hasMany(models.Booking, { foreignKey: "carId" });
     Car.hasMany(models.Review, { foreignKey: "carId" });
     Car.belongsTo(models.User, { foreignKey: "userId" });

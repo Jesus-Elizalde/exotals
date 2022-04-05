@@ -109,7 +109,7 @@ router.delete(
     const data = await db.Car.findByPk(id);
 
     if (data) {
-      await data.destroy();
+      await data.destroy({ options: { cascade: true } });
       res.json({ data: id });
     }
   })

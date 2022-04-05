@@ -49,18 +49,22 @@ module.exports = {
       transmissonId: {
         type: Sequelize.INTEGER,
         references: { model: "Transmissons" },
+        defaultValue: 1,
       },
       cylinderId: {
         type: Sequelize.INTEGER,
         references: { model: "Cylinders" },
+        defaultValue: 1,
       },
       seatId: {
         type: Sequelize.INTEGER,
         references: { model: "Seats" },
+        defaultValue: 1,
       },
       drivetrainId: {
         type: Sequelize.INTEGER,
         references: { model: "Drivetrains" },
+        defaultValue: 1,
       },
       createdAt: {
         allowNull: false,

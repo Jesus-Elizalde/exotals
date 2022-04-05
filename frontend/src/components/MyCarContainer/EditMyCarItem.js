@@ -40,12 +40,17 @@ function EditMyCarItem({ data, edit }) {
   // const [modelField, setModelField] = useState(Model?.name);
   const [modelField, setModelField] = useState(+Model.id);
   const [makeField, setMakeField] = useState(+Model.Make.id);
-  const [transmissonField, setTransmissonField] = useState(+Transmisson?.id);
-  const [seatField, setSeatField] = useState(+Seat?.id);
-  const [drivetrainField, setDrivetrainField] = useState(+Drivetrain?.id);
-  const [cylinderField, setCylinderField] = useState(+Cylinder?.id);
+  const [transmissonField, setTransmissonField] = useState(
+    +Transmisson?.id || "Na"
+  );
+  const [seatField, setSeatField] = useState(+Seat?.id || "Na");
+  const [drivetrainField, setDrivetrainField] = useState(
+    +Drivetrain?.id || "Na"
+  );
+  const [cylinderField, setCylinderField] = useState(+Cylinder?.id || "Na");
 
   console.log(transmissonField, seatField, drivetrainField, cylinderField);
+
   const onSubmit = async () => {
     const results = {
       id,

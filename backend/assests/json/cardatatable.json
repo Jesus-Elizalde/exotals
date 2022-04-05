@@ -1,12 +1,13 @@
 {
   "transmissons": [
+    "Unknown",
     "Automatic Transmission",
     "Manual Transmission",
     "Automated Manual Transmission",
-    "Continuously Variable Transmission",
-    "Unknown"
+    "Continuously Variable Transmission"
   ],
   "Seats": [
+    "Unknown",
     "1 Seat",
     "2 Seats",
     "3 Seats",
@@ -16,13 +17,14 @@
     "8 Seats"
   ],
   "Cylinders": [
+    "Uknown",
     "4 cylinders",
     "6 cylinders",
     "8 cylinders",
-    "12 cylinders",
-    "Uknown"
+    "12 cylinders"
   ],
   "Drivetrain": [
+    "Unknown",
     "All Wheel Drive",
     "Four Wheel Drive",
     "Front Wheel Drive",
