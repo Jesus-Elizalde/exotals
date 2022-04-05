@@ -9,7 +9,7 @@ const router = express.Router();
 router.get(
   "/",
   asyncHandler(async (req, res) => {
-    const cylinders = await db.Make.findAll();
+    const cylinders = await db.Cylinder.findAll();
     const transmissons = await db.Transmisson.findAll();
     const seats = await db.Seat.findAll();
     const drivetrains = await db.Drivetrain.findAll();

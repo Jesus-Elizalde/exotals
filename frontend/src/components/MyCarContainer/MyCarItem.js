@@ -8,7 +8,9 @@ function MyCarItem({ data }) {
   const models = useSelector((state) => state.models.models);
   const utilsdata = useSelector((state) => state.utildata.data.data);
 
-  const { cylinders, transmisson, seats, drivetrains } = utilsdata;
+  const { cylinders, transmissons, seats, drivetrains } = utilsdata;
+
+  console.log(utilsdata);
 
   const {
     id,
@@ -265,22 +267,38 @@ function MyCarItem({ data }) {
               <div>
                 <h2>Cylinder</h2>
                 {/* <p>{Cylinder ? Cylinder.name : "NA"}</p> */}
-                <select></select>
+                <select>
+                  {cylinders.map((ele, i) => (
+                    <option>{ele.name}</option>
+                  ))}
+                </select>
               </div>
               <div>
                 <h2>Transmisson</h2>
                 {/* <p>{Transmisson ? Transmisson.name : "NA"}</p> */}
-                <select></select>
+                <select>
+                  {transmissons.map((ele, i) => (
+                    <option>{ele.name}</option>
+                  ))}
+                </select>
               </div>
               <div>
                 <h2>Seats</h2>
                 {/* <p>{Seat ? Seat.name : "NA"}</p> */}
-                <select></select>
+                <select>
+                  {seats.map((ele, i) => (
+                    <option>{ele.name}</option>
+                  ))}
+                </select>
               </div>
               <div>
                 <h2>Drivetrain</h2>
                 {/* <p>{Seat ? Seat.name : "NA"}</p> */}
-                <select></select>
+                <select>
+                  {drivetrains.map((ele, i) => (
+                    <option>{ele.name}</option>
+                  ))}
+                </select>
               </div>
             </div>
           </div>
