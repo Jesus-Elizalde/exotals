@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+
+import { updateCar } from "../../store/cars";
 
 function EditMyCarItem({ data, edit }) {
+  const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user);
   const makes = useSelector((state) => state.makes.makes);
   const models = useSelector((state) => state.models.models);
@@ -46,7 +49,7 @@ function EditMyCarItem({ data, edit }) {
     Cylinder ? +Cylinder.id : "NA"
   );
 
-  const onSubmit = () => {
+  const onSubmit = async () => {
     const results = {
       id,
       address: addressField,
@@ -64,6 +67,10 @@ function EditMyCarItem({ data, edit }) {
       drivetrainId: drivetrainField,
     };
     console.log(results);
+    const data = await dispatch(updateCar(results));
+    if (data) {
+      edit(false);
+    }
   };
 
   return (
@@ -172,6 +179,7 @@ function EditMyCarItem({ data, edit }) {
           <div>
             <h2>Color</h2>
             <input
+              type={"text"}
               value={colorField}
               onChange={(e) => setColorField(+e.target.value)}
             ></input>

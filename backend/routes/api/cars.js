@@ -40,7 +40,64 @@ router.get(
 router.put(
   "/:id",
   asyncHandler(async (req, res) => {
-    res.json({ test: "testing" });
+    const { id } = req.params;
+    const car = await db.Car.findByPk(id, {
+      include: [
+        {
+          model: db.Image,
+        },
+        {
+          model: db.Seat,
+        },
+        {
+          model: db.Transmisson,
+        },
+        {
+          model: db.Cylinder,
+        },
+        {
+          model: db.Drivetrain,
+        },
+        {
+          model: db.Model,
+          include: db.Make,
+        },
+      ],
+    });
+    console.log(req.body);
+    const {
+      address,
+      city,
+      state,
+      country,
+      price,
+      color,
+      description,
+      modelId,
+      transmissonId,
+      cylinderId,
+      seatId,
+      drivetrainId,
+    } = req.body;
+
+    if (car) {
+      car.address = address;
+      car.city = city;
+      car.state = state;
+      car.country = country;
+      car.price = price;
+      car.color = color;
+      car.description = description;
+      car.modelId = modelId;
+      car.transmissonId = transmissonId;
+      car.cylinderId = cylinderId;
+      car.seatId = seatId;
+      car.drivetrainId = drivetrainId;
+
+      await car.save();
+      console.log(car);
+      res.json({ data: car });
+    }
   })
 );
 
