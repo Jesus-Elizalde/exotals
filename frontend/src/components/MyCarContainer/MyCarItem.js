@@ -6,6 +6,9 @@ function MyCarItem({ data }) {
   const user = useSelector((state) => state.session.user);
   const makes = useSelector((state) => state.makes.makes);
   const models = useSelector((state) => state.models.models);
+  const utilsdata = useSelector((state) => state.utildata.data.data);
+
+  const { cylinders, transmisson, seats, drivetrains } = utilsdata;
 
   const {
     id,
@@ -104,6 +107,12 @@ function MyCarItem({ data }) {
                   <div>
                     <h2>State</h2>
                     <p>{state}</p>
+                  </div>
+                </div>
+                <div className="mcic-inner-one">
+                  <div>
+                    <h2>Country</h2>
+                    <p>{country}</p>
                   </div>
                 </div>
                 <div>
@@ -215,6 +224,15 @@ function MyCarItem({ data }) {
                     <input
                       value={stateField}
                       onChange={(e) => setStateField(e.target.value)}
+                    ></input>
+                  </div>
+                </div>
+                <div className="mcic-inner-one">
+                  <div>
+                    <h2>Country</h2>
+                    <input
+                      value={countryField}
+                      onChange={(e) => setCountryField(e.target.value)}
                     ></input>
                   </div>
                 </div>

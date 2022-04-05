@@ -5,12 +5,14 @@ import sessionReducer from "./session";
 import carReducer from "./cars";
 import makeReducer from "./makes";
 import modelReducer from "./models";
+import utilDataReducer from "./utildata";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   cars: carReducer,
   makes: makeReducer,
   models: modelReducer,
+  utildata: utilDataReducer,
 });
 
 let enhancer;
