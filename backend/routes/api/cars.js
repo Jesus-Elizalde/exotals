@@ -101,4 +101,18 @@ router.put(
   })
 );
 
+router.delete(
+  "/:id/delete",
+  asyncHandler(async (req, res) => {
+    const { id } = req.params;
+
+    const data = await db.Car.findByPk(id);
+
+    if (data) {
+      await data.destroy();
+      res.json({ data: id });
+    }
+  })
+);
+
 module.exports = router;

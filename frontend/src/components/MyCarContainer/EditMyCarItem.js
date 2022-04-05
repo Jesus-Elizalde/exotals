@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { updateCar } from "../../store/cars";
+import { updateCar, deleteOneCar } from "../../store/cars";
 
 function EditMyCarItem({ data, edit }) {
   const dispatch = useDispatch();
@@ -27,6 +27,8 @@ function EditMyCarItem({ data, edit }) {
     Drivetrain,
     Cylinder,
   } = data;
+
+  const [deleteButton, setDeleteButton] = useState(false);
 
   const [addressField, setAddressField] = useState(address);
   const [cityField, setCityField] = useState(city);
@@ -61,20 +63,35 @@ function EditMyCarItem({ data, edit }) {
       seatId: seatField,
       drivetrainId: drivetrainField,
     };
-    console.log(results);
-    const data = await dispatch(updateCar(results));
-    if (data) {
+
+    const data123 = await dispatch(updateCar(results));
+    if (data123) {
       edit(false);
     }
   };
 
+  let delConfirm;
+  if (deleteButton) {
+    delConfirm = (
+      <>
+        <p>Are you sure you want to delete?</p>
+        <button onClick={() => setDeleteButton(false)}>Cancel</button>
+        <button onClick={() => dispatch(deleteOneCar(data))}>DELETE</button>
+      </>
+    );
+  } else {
+    delConfirm = (
+      <>
+        <button onClick={() => edit(false)}>cancel</button>
+        <button onClick={() => setDeleteButton(true)}>delete</button>
+        <button onClick={() => onSubmit()}>update</button>
+      </>
+    );
+  }
+
   return (
     <div className="mycar-item">
-      <div>
-        <button onClick={() => edit(false)}>cancel</button>
-        <button>delete</button>
-        <button onClick={() => onSubmit()}>update</button>
-      </div>
+      <div>{delConfirm}</div>
       <div className="mycar-item-container">
         <div>
           <p className="mcic-img">Img holder</p>
