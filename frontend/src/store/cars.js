@@ -4,6 +4,7 @@ const SET_CARS = "cars/setCars";
 const UPDATE_CAR = "cars/updateCars";
 const REMOVE_CARS = "cars/removeCars";
 const DELETE_CAR = "cars/deleteCar";
+const ADD_CAR = "cars/addCar";
 
 const setCars = (cars) => {
   return {
@@ -16,6 +17,10 @@ export const removeCars = () => {
   return {
     type: REMOVE_CARS,
   };
+};
+
+export const addCar = (car) => {
+  return { type: ADD_CAR, payload: car };
 };
 
 export const updateCars = (car) => {
@@ -38,6 +43,19 @@ export const getAllCars = () => async (dispatch) => {
   if (response.ok) {
     const data = await response.json();
     dispatch(setCars(data));
+    return data;
+  }
+};
+
+export const AddOneCar = (car) => async (dispatch) => {
+  const response = await csrfFetch("/api/cars/new", {
+    method: "POST",
+    body: JSON.stringify(car),
+  });
+
+  if (response.ok) {
+    const data = await response.json();
+    dispatch(getAllCars());
     return data;
   }
 };
@@ -85,10 +103,13 @@ const carReducer = (state = initialState, action) => {
       newState = Object.assign({}, state);
       newState.cars = null;
       return newState;
+    case ADD_CAR:
+      newState = Object.assign({}, state);
+      newState.cars[action.payload.data.id] = action.data;
     case UPDATE_CAR:
       newState = Object.assign({}, state);
 
-      newState.cars[action.payload.data.id] = action.payload.data;
+      // newState.cars[action.data.id] = action.data;
 
       return newState;
     case DELETE_CAR:

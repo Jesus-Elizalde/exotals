@@ -16,8 +16,6 @@ function NotEditMyCarItem({ data, edit }) {
     Cylinder,
   } = data;
 
-  console.log(data);
-
   return (
     <div className="mycar-item">
       <div>

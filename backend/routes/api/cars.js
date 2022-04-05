@@ -28,6 +28,7 @@ router.get(
         {
           model: db.Model,
           include: db.Make,
+          order: [[("createdAt", "DESC")]],
         },
       ],
     });
@@ -37,6 +38,18 @@ router.get(
   })
 );
 
+router.post(
+  "/new",
+  asyncHandler(async (req, res) => {
+    console.log(req.body, "++++++++=======++++++");
+    const data = await db.Car.build(req.body);
+    if (data) {
+      await data.save();
+
+      res.json({ data });
+    }
+  })
+);
 router.put(
   "/:id",
   asyncHandler(async (req, res) => {
@@ -61,6 +74,7 @@ router.put(
         {
           model: db.Model,
           include: db.Make,
+          order: [[("createdAt", "DESC")]],
         },
       ],
     });
