@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 
 function MyCarItem({ data }) {
   const user = useSelector((state) => state.session.user);
+  const makes = useSelector((state) => state.makes.makes);
+  const models = useSelector((state) => state.models.models);
 
   const {
     id,
@@ -29,8 +31,9 @@ function MyCarItem({ data }) {
   const [priceField, setPriceField] = useState(price);
   const [colorField, setColorField] = useState(color);
   const [descriptionField, setDescriptionField] = useState(description);
-  const [modelField, setModelField] = useState(Model?.name);
-  const [makeField, setMakeField] = useState(Model?.Make.name);
+  // const [modelField, setModelField] = useState(Model?.name);
+  const [modelField, setModelField] = useState(Model?.id);
+  const [makeField, setMakeField] = useState(Model?.Make.id);
   const [transmissonField, setTransmissonField] = useState(Transmisson?.name);
   const [seatField, setSeatField] = useState(Seat ? Seat.name : "NA");
   const [drivetrainField, setDrivetrainField] = useState(
@@ -51,10 +54,14 @@ function MyCarItem({ data }) {
       color: colorField,
       description: descriptionField,
       userId: user.id,
+      modelId: modelField,
+      transmissonId: null,
+      cylinderId: null,
+      seatId: null,
+      drivetrainId: null,
     };
   };
 
-  console.log(editMode);
   let content;
   if (!editMode) {
     content = (
@@ -158,19 +165,29 @@ function MyCarItem({ data }) {
                 <div className="mcic-inner-one">
                   <div>
                     <h2>Make</h2>
-                    {/* <p>{Model.Make.name}</p> */}
-                    <input
+                    <select
                       value={makeField}
-                      onChange={(e) => setMakeField(e.target.value)}
-                    ></input>
+                      onChange={(e) => setMakeField(+e.target.value)}
+                    >
+                      {Object.values(makes).map((ele, i) => (
+                        <option key={i} value={ele.id}>
+                          {ele.name}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                   <div>
                     <h2>Model</h2>
-                    {/* <p>{Model.name}</p> */}
-                    <input
+                    <select
                       value={modelField}
-                      onChange={(e) => setModelField(e.target.value)}
-                    ></input>
+                      onChange={(e) => setModelField(+e.target.value)}
+                    >
+                      {Object.values(models)
+                        .filter((ele) => makeField === ele.makeId)
+                        .map((ele, i) => (
+                          <option key={i}>{ele.name}</option>
+                        ))}
+                    </select>
                   </div>
                 </div>
                 <div className="mcic-inner-one">
