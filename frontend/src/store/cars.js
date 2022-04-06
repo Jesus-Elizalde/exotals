@@ -82,7 +82,6 @@ export const deleteOneCar = (car) => async (dispatch) => {
   if (response.ok) {
     const data = await response.json();
     dispatch(deleteCar(data));
-    console.log(data);
     return data;
   }
 };

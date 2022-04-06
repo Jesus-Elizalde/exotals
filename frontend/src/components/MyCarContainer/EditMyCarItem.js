@@ -26,7 +26,34 @@ function EditMyCarItem({ data, edit }) {
     Seat,
     Drivetrain,
     Cylinder,
+    Images,
   } = data;
+
+  const [imgInputList, setImgInputList] = useState([...Images, { url: "" }]);
+  const [finalImgInputList, setFinalImgInputList] = useState([...imgInputList]);
+  const [currentImg, setCurrentImg] = useState(0);
+
+  console.log(imgInputList);
+  console.log(finalImgInputList, "========");
+
+  const handleInputChange = (e, index) => {
+    const { name, value } = e.target;
+    const list = [...imgInputList];
+    list[index][name] = value;
+    setImgInputList(list);
+  };
+
+  const handleRemoveClick = (index) => {
+    const list = [...imgInputList];
+    list.splice(index, 1);
+    setImgInputList(list);
+  };
+
+  const handleAddClick = () => {
+    setImgInputList([...imgInputList, { url: "" }]);
+  };
+
+  const collectionSize = imgInputList.length;
 
   const [deleteButton, setDeleteButton] = useState(false);
 
@@ -64,6 +91,7 @@ function EditMyCarItem({ data, edit }) {
       cylinderId: cylinderField,
       seatId: seatField,
       drivetrainId: drivetrainField,
+      imageArr: imgInputList,
     };
 
     const data123 = await dispatch(updateCar(results));
@@ -97,11 +125,52 @@ function EditMyCarItem({ data, edit }) {
       <div>{delConfirm}</div>
       <div className="mycar-item-container">
         <div>
-          <p className="mcic-img">Img holder</p>
           <div>
-            <a>left</a>
-            <a>right</a>
+            <img src={imgInputList[currentImg]?.url} className="mcic-img" />
+            <div>
+              <button
+                disabled={currentImg === 0}
+                onClick={() =>
+                  setCurrentImg((prevActiveStep) => prevActiveStep - 1)
+                }
+              >
+                left
+              </button>
+              <button
+                disabled={currentImg === collectionSize - 1}
+                onClick={() =>
+                  setCurrentImg((prevActiveStep) => prevActiveStep + 1)
+                }
+              >
+                right
+              </button>
+            </div>
           </div>
+          {imgInputList.map((x, i) => {
+            return (
+              <div className="box" key={i}>
+                <input
+                  name="url"
+                  placeholder="Enter Img Url"
+                  value={x.url}
+                  onChange={(e) => handleInputChange(e, i)}
+                />
+                <div className="btn-box">
+                  {imgInputList.length !== 1 && (
+                    <button
+                      className="mr10"
+                      onClick={() => handleRemoveClick(i)}
+                    >
+                      Remove
+                    </button>
+                  )}
+                  {imgInputList.length - 1 === i && (
+                    <button onClick={handleAddClick}>Add</button>
+                  )}
+                </div>
+              </div>
+            );
+          })}
         </div>
         <div className="mcic-one">
           <div>

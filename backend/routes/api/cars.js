@@ -42,7 +42,7 @@ router.post(
   "/new",
   asyncHandler(async (req, res) => {
     const formData = req.body;
-    console.log(req.body, "++++++++=======++++++");
+
     const data = await db.Car.build(formData);
     if (data) {
       await data.save();
@@ -93,7 +93,7 @@ router.put(
         },
       ],
     });
-    console.log(req.body);
+
     const {
       address,
       city,
@@ -124,7 +124,7 @@ router.put(
       car.drivetrainId = drivetrainId;
 
       await car.save();
-      console.log(car);
+
       res.json({ data: car });
     }
   })
