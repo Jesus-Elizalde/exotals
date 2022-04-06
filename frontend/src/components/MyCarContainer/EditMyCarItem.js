@@ -30,11 +30,11 @@ function EditMyCarItem({ data, edit }) {
   } = data;
 
   const [imgInputList, setImgInputList] = useState([...Images, { url: "" }]);
-  const [finalImgInputList, setFinalImgInputList] = useState([...imgInputList]);
+  const [deletedImgList, setDeletedImgList] = useState([]);
   const [currentImg, setCurrentImg] = useState(0);
 
   console.log(imgInputList);
-  console.log(finalImgInputList, "========");
+  console.log(deletedImgList);
 
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
@@ -45,6 +45,10 @@ function EditMyCarItem({ data, edit }) {
 
   const handleRemoveClick = (index) => {
     const list = [...imgInputList];
+    const delList = [...deletedImgList];
+
+    delList.push(list[index]);
+    setDeletedImgList(delList);
     list.splice(index, 1);
     setImgInputList(list);
   };
@@ -92,6 +96,7 @@ function EditMyCarItem({ data, edit }) {
       seatId: seatField,
       drivetrainId: drivetrainField,
       imageArr: imgInputList,
+      deletedImageArr: deletedImgList,
     };
 
     const data123 = await dispatch(updateCar(results));

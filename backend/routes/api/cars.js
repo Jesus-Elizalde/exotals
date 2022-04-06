@@ -69,6 +69,39 @@ router.put(
   "/:id",
   asyncHandler(async (req, res) => {
     const { id } = req.params;
+
+    const imgArr = req.body.imageArr;
+    const deletedArr = req.body.deletedImageArr;
+
+    if (deletedArr.length) {
+      for (const delObj of deletedArr) {
+        if (delObj.id) {
+          const destoryData = await db.Image.findByPk(delObj.id);
+          if (destoryData) await destoryData.destroy();
+        }
+      }
+    }
+
+    if (imgArr.length) {
+      for (const imgObj of imgArr) {
+        if (!imgObj.id) {
+          const newImg = await db.Image.build({
+            url: imgObj.url,
+            carId: id,
+          });
+          if (newImg) {
+            await newImg.save();
+          }
+        } else {
+          const editImg = await db.Image.findByPk(imgObj.id);
+          if (editImg) {
+            editImg.url = imgObj.url;
+            await editImg.save();
+          }
+        }
+      }
+    }
+
     const car = await db.Car.findByPk(id, {
       include: [
         {
