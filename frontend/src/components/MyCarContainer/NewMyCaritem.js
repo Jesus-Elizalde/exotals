@@ -3,12 +3,21 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { AddOneCar } from "../../store/cars";
 
+import ImgUrl from "./ImgUrl";
+
 function NewMyCarItem({ add }) {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user);
   const makes = useSelector((state) => state.makes.makes);
   const models = useSelector((state) => state.models.models);
   const utilsdata = useSelector((state) => state.utildata.data.data);
+
+  const [addImgInput, setAddImgInput] = useState(5);
+
+  const urlInputArr = [];
+  for (let i = 0; i < addImgInput; i++) {
+    urlInputArr.push(<ImgUrl remove={setAddImgInput} />);
+  }
 
   const { cylinders, transmissons, seats, drivetrains } = utilsdata;
 
@@ -62,13 +71,7 @@ function NewMyCarItem({ add }) {
         <button onClick={() => onSubmit()}>Add</button>
       </div>
       <div className="mycar-item-container">
-        <div>
-          <p className="mcic-img">Img holder</p>
-          <div>
-            <a>left</a>
-            <a>right</a>
-          </div>
-        </div>
+        <div>{urlInputArr}</div>
         <div className="mcic-one">
           <div>
             <div className="mcic-inner-one">

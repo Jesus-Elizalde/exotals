@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 function NotEditMyCarItem({ data, edit }) {
+  const [currentImg, setCurrentImg] = useState(0);
+
   const {
     address,
     city,
@@ -14,7 +16,10 @@ function NotEditMyCarItem({ data, edit }) {
     Seat,
     Drivetrain,
     Cylinder,
+    Images,
   } = data;
+
+  const collectionSize = Images.length;
 
   return (
     <div className="mycar-item">
@@ -23,10 +28,24 @@ function NotEditMyCarItem({ data, edit }) {
       </div>
       <div className="mycar-item-container">
         <div>
-          <img className="mcic-img" />
+          <img src={Images[currentImg]?.url} className="mcic-img" />
           <div>
-            <a>left</a>
-            <a>right</a>
+            <button
+              disabled={currentImg === 0}
+              onClick={() =>
+                setCurrentImg((prevActiveStep) => prevActiveStep - 1)
+              }
+            >
+              left
+            </button>
+            <button
+              disabled={currentImg === collectionSize - 1}
+              onClick={() =>
+                setCurrentImg((prevActiveStep) => prevActiveStep + 1)
+              }
+            >
+              right
+            </button>
           </div>
         </div>
         <div className="mcic-one">
