@@ -63,9 +63,9 @@ function NewMyCarItem({ add }) {
   const [stateValidator, setStateValidator] = useState(true);
   const [countryValidator, setCountryValidator] = useState(true);
   const [priceValidator, setPriceValidator] = useState(true);
-
   const [colorValidator, setColorValidator] = useState(true);
   const [descriptionValidator, setDescriptionValidator] = useState(true);
+  const [imageValidator, setImageValidator] = useState(true);
 
   useEffect(() => {
     setAddressValidator(true);
@@ -75,6 +75,17 @@ function NewMyCarItem({ add }) {
     setPriceValidator(true);
     setColorValidator(true);
     setDescriptionValidator(true);
+    setImageValidator(true);
+
+    console.log(imgInputList);
+
+    for (const item of imgInputList) {
+      if (item.url) {
+        break;
+      }
+      setImageValidator(false);
+    }
+
     if (!addressField.length) setAddressValidator(false);
     if (!cityField.length) setCityValidator(false);
     if (!stateField.length) setStateValidator(false);
@@ -90,6 +101,7 @@ function NewMyCarItem({ add }) {
     priceField,
     colorField,
     descriptionField,
+    imgInputList,
   ]);
 
   const onSubmit = async () => {
@@ -100,7 +112,8 @@ function NewMyCarItem({ add }) {
       !countryValidator ||
       !priceValidator ||
       !colorValidator ||
-      !descriptionValidator
+      !descriptionValidator ||
+      !imageValidator
     ) {
       console.log("validator false");
       return;
@@ -137,6 +150,10 @@ function NewMyCarItem({ add }) {
       </div>
       <div className="mycar-item-container">
         <div>
+          <h2>
+            Images{" "}
+            {!imageValidator && <span className="validator-star">*</span>}
+          </h2>
           <img src={imgInputList[currentImg]?.url} className="mcic-img" />
           <div>
             <button
@@ -176,7 +193,7 @@ function NewMyCarItem({ add }) {
                     </button>
                   )}
                   {imgInputList.length - 1 === i && (
-                    <button onClick={handleAddClick}>Add</button>
+                    <button onClick={handleAddClick}>Add </button>
                   )}
                 </div>
               </div>
@@ -226,7 +243,6 @@ function NewMyCarItem({ add }) {
                     <span className="validator-star">*</span>
                   )}
                 </h2>
-                {/* <p>{address}</p> */}
                 <input
                   placeholder="add address"
                   value={addressField}
@@ -241,7 +257,6 @@ function NewMyCarItem({ add }) {
                   {!cityValidator && <span className="validator-star">*</span>}
                 </h2>
 
-                {/* <p>{city}</p> */}
                 <input
                   placeholder="add city"
                   value={cityField}

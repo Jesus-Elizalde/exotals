@@ -28,6 +28,7 @@ function NotEditMyCarItem({ data, edit }) {
       </div>
       <div className="mycar-item-container">
         <div>
+          <h2>Images</h2>
           <img src={Images[currentImg]?.url} className="mcic-img" />
           <div>
             <button

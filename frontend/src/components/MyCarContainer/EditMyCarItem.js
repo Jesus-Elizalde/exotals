@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { updateCar, deleteOneCar } from "../../store/cars";
@@ -67,12 +67,74 @@ function EditMyCarItem({ data, edit }) {
   const [descriptionField, setDescriptionField] = useState(description);
   const [modelField, setModelField] = useState(+Model.id);
   const [makeField, setMakeField] = useState(+Model.Make.id);
+  useEffect(() => {
+    setModelField(
+      Object.values(models).filter((e) => e.makeId === makeField)[0].id
+    );
+  }, [makeField]);
   const [transmissonField, setTransmissonField] = useState(+Transmisson?.id);
   const [seatField, setSeatField] = useState(+Seat?.id || "Na");
   const [drivetrainField, setDrivetrainField] = useState(+Drivetrain?.id);
   const [cylinderField, setCylinderField] = useState(+Cylinder?.id || "Na");
 
+  const [addressValidator, setAddressValidator] = useState(true);
+  const [cityValidator, setCityValidator] = useState(true);
+  const [stateValidator, setStateValidator] = useState(true);
+  const [countryValidator, setCountryValidator] = useState(true);
+  const [priceValidator, setPriceValidator] = useState(true);
+  const [colorValidator, setColorValidator] = useState(true);
+  const [descriptionValidator, setDescriptionValidator] = useState(true);
+  const [imageValidator, setImageValidator] = useState(true);
+
+  useEffect(() => {
+    setAddressValidator(true);
+    setCityValidator(true);
+    setStateValidator(true);
+    setCountryValidator(true);
+    setPriceValidator(true);
+    setColorValidator(true);
+    setDescriptionValidator(true);
+    setImageValidator(true);
+
+    for (const item of imgInputList) {
+      if (item.url) {
+        break;
+      }
+      setImageValidator(false);
+    }
+
+    if (!addressField.length) setAddressValidator(false);
+    if (!cityField.length) setCityValidator(false);
+    if (!stateField.length) setStateValidator(false);
+    if (!countryField.length) setCountryValidator(false);
+    if (priceField < 250) setPriceValidator(false);
+    if (!colorField.length) setColorValidator(false);
+    if (!descriptionField.length) setDescriptionValidator(false);
+  }, [
+    addressField,
+    cityField,
+    stateField,
+    countryField,
+    priceField,
+    colorField,
+    descriptionField,
+    imgInputList,
+  ]);
+
   const onSubmit = async () => {
+    if (
+      !addressValidator ||
+      !cityValidator ||
+      !stateValidator ||
+      !countryValidator ||
+      !priceValidator ||
+      !colorValidator ||
+      !descriptionValidator ||
+      !imageValidator
+    ) {
+      console.log("validator false");
+      return;
+    }
     const results = {
       id,
       address: addressField,
@@ -124,6 +186,10 @@ function EditMyCarItem({ data, edit }) {
       <div className="mycar-item-container">
         <div>
           <div>
+            <h2>
+              Images{" "}
+              {!imageValidator && <span className="validator-star">*</span>}
+            </h2>
             <img src={imgInputList[currentImg]?.url} className="mcic-img" />
             <div>
               <button
@@ -204,7 +270,12 @@ function EditMyCarItem({ data, edit }) {
             </div>
             <div className="mcic-inner-one">
               <div>
-                <h2>Address</h2>
+                <h2>
+                  Address{" "}
+                  {!addressValidator && (
+                    <span className="validator-star">*</span>
+                  )}
+                </h2>
                 <input
                   value={addressField}
                   onChange={(e) => setAddressField(e.target.value)}
@@ -213,14 +284,20 @@ function EditMyCarItem({ data, edit }) {
             </div>
             <div className="mcic-inner-one">
               <div>
-                <h2>City</h2>
+                <h2>
+                  City{" "}
+                  {!cityValidator && <span className="validator-star">*</span>}
+                </h2>
                 <input
                   value={cityField}
                   onChange={(e) => setCityField(e.target.value)}
                 ></input>
               </div>
               <div>
-                <h2>State</h2>
+                <h2>
+                  State{" "}
+                  {!stateValidator && <span className="validator-star">*</span>}
+                </h2>
                 <input
                   value={stateField}
                   onChange={(e) => setStateField(e.target.value)}
@@ -229,7 +306,12 @@ function EditMyCarItem({ data, edit }) {
             </div>
             <div className="mcic-inner-one">
               <div>
-                <h2>Country</h2>
+                <h2>
+                  Country{" "}
+                  {!countryValidator && (
+                    <span className="validator-star">*</span>
+                  )}
+                </h2>
                 <input
                   value={countryField}
                   onChange={(e) => setCountryField(e.target.value)}
@@ -237,7 +319,12 @@ function EditMyCarItem({ data, edit }) {
               </div>
             </div>
             <div>
-              <h2>Description</h2>
+              <h2>
+                Description{" "}
+                {!descriptionValidator && (
+                  <span className="validator-star">*</span>
+                )}
+              </h2>
               <textarea
                 value={descriptionField}
                 onChange={(e) => setDescriptionField(e.target.value)}
@@ -247,14 +334,20 @@ function EditMyCarItem({ data, edit }) {
         </div>
         <div className="mcic-two">
           <div>
-            <h2>Price</h2>
+            <h2>
+              Price{" "}
+              {!priceValidator && <span className="validator-star">*</span>}
+            </h2>
             <input
               value={priceField}
               onChange={(e) => setPriceField(+e.target.value)}
             ></input>
           </div>
           <div>
-            <h2>Color</h2>
+            <h2>
+              Color{" "}
+              {!colorValidator && <span className="validator-star">*</span>}
+            </h2>
             <input
               type={"text"}
               value={colorField}
