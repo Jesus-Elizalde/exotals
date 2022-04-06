@@ -36,7 +36,6 @@ function NewMyCarItem({ add }) {
 
   const { cylinders, transmissons, seats, drivetrains } = utilsdata;
 
-  console.log(makes);
   const [addressField, setAddressField] = useState("");
   const [cityField, setCityField] = useState("");
   const [stateField, setStateField] = useState("");
@@ -44,8 +43,16 @@ function NewMyCarItem({ add }) {
   const [priceField, setPriceField] = useState("");
   const [colorField, setColorField] = useState("");
   const [descriptionField, setDescriptionField] = useState("");
-  const [makeField, setMakeField] = useState("");
-  const [modelField, setModelField] = useState("");
+  const [makeField, setMakeField] = useState(1);
+  const [modelField, setModelField] = useState(
+    Object.values(models).filter((e) => e.makeId === makeField)[0].id
+  );
+
+  useEffect(() => {
+    setModelField(
+      Object.values(models).filter((e) => e.makeId === makeField)[0].id
+    );
+  }, [makeField]);
   const [transmissonField, setTransmissonField] = useState(1);
   const [seatField, setSeatField] = useState(1);
   const [drivetrainField, setDrivetrainField] = useState(1);
@@ -56,10 +63,9 @@ function NewMyCarItem({ add }) {
   const [stateValidator, setStateValidator] = useState(true);
   const [countryValidator, setCountryValidator] = useState(true);
   const [priceValidator, setPriceValidator] = useState(true);
+
   const [colorValidator, setColorValidator] = useState(true);
   const [descriptionValidator, setDescriptionValidator] = useState(true);
-  const [modelValidator, setModelValidator] = useState(true);
-  const [makeValidator, setMakeValidator] = useState(true);
 
   useEffect(() => {
     setAddressValidator(true);
@@ -69,17 +75,13 @@ function NewMyCarItem({ add }) {
     setPriceValidator(true);
     setColorValidator(true);
     setDescriptionValidator(true);
-    setModelValidator(true);
-    setMakeValidator(true);
     if (!addressField.length) setAddressValidator(false);
     if (!cityField.length) setCityValidator(false);
     if (!stateField.length) setStateValidator(false);
     if (!countryField.length) setCountryValidator(false);
-    if (!priceField.length) setPriceValidator(false);
+    if (priceField < 250) setPriceValidator(false);
     if (!colorField.length) setColorValidator(false);
     if (!descriptionField.length) setDescriptionValidator(false);
-    if (!modelField.length) setModelValidator(false);
-    if (!makeField.length) setMakeValidator(false);
   }, [
     addressField,
     cityField,
@@ -88,11 +90,21 @@ function NewMyCarItem({ add }) {
     priceField,
     colorField,
     descriptionField,
-    modelField,
-    makeField,
   ]);
 
   const onSubmit = async () => {
+    if (
+      !addressValidator ||
+      !cityValidator ||
+      !stateValidator ||
+      !countryValidator ||
+      !priceValidator ||
+      !colorValidator ||
+      !descriptionValidator
+    ) {
+      console.log("validator false");
+      return;
+    }
     const results = {
       address: addressField,
       city: cityField,
@@ -175,25 +187,23 @@ function NewMyCarItem({ add }) {
           <div>
             <div className="mcic-inner-one">
               <div>
-                <h2 className="make-h2">
-                  Make <span style={{ color: "red" }}>*</span>
-                </h2>
+                <h2 className="make-h2">Make</h2>
                 <select
                   value={makeField}
                   onChange={(e) => setMakeField(+e.target.value)}
                 >
-                  {Object.values(makes).map((ele, i) => (
-                    <option key={i} value={ele.id}>
-                      {ele.name}
-                    </option>
-                  ))}
+                  {Object.values(makes).map(
+                    (ele, i) =>
+                      ele.id !== undefined && (
+                        <option key={i} value={ele.id}>
+                          {ele.name}
+                        </option>
+                      )
+                  )}
                 </select>
               </div>
               <div>
-                <h2>
-                  Model{" "}
-                  {!modelValidator && <span className="validator-star">*</span>}
-                </h2>
+                <h2>Model</h2>
                 <select
                   value={modelField}
                   onChange={(e) => setModelField(+e.target.value)}

@@ -52,12 +52,14 @@ router.post(
       const imgData = [];
       if (imgArr.length) {
         for (const imgObj of imgArr) {
-          const newUrl = await db.Image.create({
-            url: imgObj.url,
-            carId: data.id,
-          });
-          if (newUrl) {
-            imgData.push(newUrl);
+          if (imgObj.url.length) {
+            const newUrl = await db.Image.create({
+              url: imgObj.url,
+              carId: data.id,
+            });
+            if (newUrl) {
+              imgData.push(newUrl);
+            }
           }
         }
       }
@@ -85,18 +87,22 @@ router.put(
     if (imgArr.length) {
       for (const imgObj of imgArr) {
         if (!imgObj.id) {
-          const newImg = await db.Image.build({
-            url: imgObj.url,
-            carId: id,
-          });
-          if (newImg) {
-            await newImg.save();
+          if (imgObj.url) {
+            const newImg = await db.Image.build({
+              url: imgObj.url,
+              carId: id,
+            });
+            if (newImg) {
+              await newImg.save();
+            }
           }
         } else {
-          const editImg = await db.Image.findByPk(imgObj.id);
-          if (editImg) {
-            editImg.url = imgObj.url;
-            await editImg.save();
+          if (imgObj.url.length) {
+            const editImg = await db.Image.findByPk(imgObj.id);
+            if (editImg) {
+              editImg.url = imgObj.url;
+              await editImg.save();
+            }
           }
         }
       }
