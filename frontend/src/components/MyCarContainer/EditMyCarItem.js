@@ -37,7 +37,6 @@ function EditMyCarItem({ data, edit }) {
   const [priceField, setPriceField] = useState(price);
   const [colorField, setColorField] = useState(color);
   const [descriptionField, setDescriptionField] = useState(description);
-  // const [modelField, setModelField] = useState(Model?.name);
   const [modelField, setModelField] = useState(+Model.id);
   const [makeField, setMakeField] = useState(+Model.Make.id);
   const [transmissonField, setTransmissonField] = useState(
@@ -74,6 +73,7 @@ function EditMyCarItem({ data, edit }) {
   };
 
   let delConfirm;
+
   if (deleteButton) {
     delConfirm = (
       <>
