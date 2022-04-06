@@ -80,12 +80,17 @@ h2 {
   height: 50px;
 }
 
-.imgleft {
+.editbuttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.imgright {
-}
-
 .imageinputs {
   height: 86px;
   overflow: scroll;
+}
+
+.requiredalert {
+  color: red;
+  font-weight: bold;
 }

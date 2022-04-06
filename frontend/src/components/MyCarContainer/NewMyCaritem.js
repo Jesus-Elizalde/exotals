@@ -142,9 +142,14 @@ function NewMyCarItem({ add }) {
 
   return (
     <div className="mycar-item">
-      <div>
-        <button onClick={() => add(false)}>Cancel</button>
-        <button onClick={() => onSubmit()}>Add</button>
+      <div className="editbuttons">
+        <div>
+          <button onClick={() => add(false)}>Cancel</button>
+          <button onClick={() => onSubmit()}>Add</button>
+        </div>
+        <div>
+          <p className="reuqiretext">* - required (minium on price 251)</p>
+        </div>
       </div>
       <div className="mycar-item-container">
         <div>

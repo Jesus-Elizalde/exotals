@@ -182,7 +182,12 @@ function EditMyCarItem({ data, edit }) {
 
   return (
     <div className="mycar-item">
-      <div>{delConfirm}</div>
+      <div className="editbuttons">
+        <div>{delConfirm}</div>
+        <div>
+          <p className="requiredalert">* - required (minium on price 251)</p>
+        </div>
+      </div>
       <div className="mycar-item-container">
         <div>
           <div>
