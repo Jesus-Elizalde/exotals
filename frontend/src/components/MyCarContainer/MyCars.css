@@ -68,3 +68,7 @@ h2 {
   height: 100px;
   overflow: scroll;
 }
+
+.validator-star {
+  color: red;
+}

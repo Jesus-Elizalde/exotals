@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+
+import { useState, useEffect } from "react";
 
 import { AddOneCar } from "../../store/cars";
 
@@ -34,6 +36,7 @@ function NewMyCarItem({ add }) {
 
   const { cylinders, transmissons, seats, drivetrains } = utilsdata;
 
+  console.log(makes);
   const [addressField, setAddressField] = useState("");
   const [cityField, setCityField] = useState("");
   const [stateField, setStateField] = useState("");
@@ -41,13 +44,53 @@ function NewMyCarItem({ add }) {
   const [priceField, setPriceField] = useState("");
   const [colorField, setColorField] = useState("");
   const [descriptionField, setDescriptionField] = useState("");
-  // const [modelField, setModelField] = useState(Model?.name);
-  const [modelField, setModelField] = useState(models[1]);
-  const [makeField, setMakeField] = useState("Na");
+  const [makeField, setMakeField] = useState("");
+  const [modelField, setModelField] = useState("");
   const [transmissonField, setTransmissonField] = useState(1);
   const [seatField, setSeatField] = useState(1);
   const [drivetrainField, setDrivetrainField] = useState(1);
   const [cylinderField, setCylinderField] = useState(1);
+
+  const [addressValidator, setAddressValidator] = useState(true);
+  const [cityValidator, setCityValidator] = useState(true);
+  const [stateValidator, setStateValidator] = useState(true);
+  const [countryValidator, setCountryValidator] = useState(true);
+  const [priceValidator, setPriceValidator] = useState(true);
+  const [colorValidator, setColorValidator] = useState(true);
+  const [descriptionValidator, setDescriptionValidator] = useState(true);
+  const [modelValidator, setModelValidator] = useState(true);
+  const [makeValidator, setMakeValidator] = useState(true);
+
+  useEffect(() => {
+    setAddressValidator(true);
+    setCityValidator(true);
+    setStateValidator(true);
+    setCountryValidator(true);
+    setPriceValidator(true);
+    setColorValidator(true);
+    setDescriptionValidator(true);
+    setModelValidator(true);
+    setMakeValidator(true);
+    if (!addressField.length) setAddressValidator(false);
+    if (!cityField.length) setCityValidator(false);
+    if (!stateField.length) setStateValidator(false);
+    if (!countryField.length) setCountryValidator(false);
+    if (!priceField.length) setPriceValidator(false);
+    if (!colorField.length) setColorValidator(false);
+    if (!descriptionField.length) setDescriptionValidator(false);
+    if (!modelField.length) setModelValidator(false);
+    if (!makeField.length) setMakeValidator(false);
+  }, [
+    addressField,
+    cityField,
+    stateField,
+    countryField,
+    priceField,
+    colorField,
+    descriptionField,
+    modelField,
+    makeField,
+  ]);
 
   const onSubmit = async () => {
     const results = {
@@ -132,7 +175,9 @@ function NewMyCarItem({ add }) {
           <div>
             <div className="mcic-inner-one">
               <div>
-                <h2>Make</h2>
+                <h2 className="make-h2">
+                  Make <span style={{ color: "red" }}>*</span>
+                </h2>
                 <select
                   value={makeField}
                   onChange={(e) => setMakeField(+e.target.value)}
@@ -145,7 +190,10 @@ function NewMyCarItem({ add }) {
                 </select>
               </div>
               <div>
-                <h2>Model</h2>
+                <h2>
+                  Model{" "}
+                  {!modelValidator && <span className="validator-star">*</span>}
+                </h2>
                 <select
                   value={modelField}
                   onChange={(e) => setModelField(+e.target.value)}
@@ -162,7 +210,12 @@ function NewMyCarItem({ add }) {
             </div>
             <div className="mcic-inner-one">
               <div>
-                <h2>Address</h2>
+                <h2>
+                  Address{" "}
+                  {!addressValidator && (
+                    <span className="validator-star">*</span>
+                  )}
+                </h2>
                 {/* <p>{address}</p> */}
                 <input
                   placeholder="add address"
@@ -173,7 +226,11 @@ function NewMyCarItem({ add }) {
             </div>
             <div className="mcic-inner-one">
               <div>
-                <h2>City</h2>
+                <h2>
+                  City{" "}
+                  {!cityValidator && <span className="validator-star">*</span>}
+                </h2>
+
                 {/* <p>{city}</p> */}
                 <input
                   placeholder="add city"
@@ -182,7 +239,10 @@ function NewMyCarItem({ add }) {
                 ></input>
               </div>
               <div>
-                <h2>State</h2>
+                <h2>
+                  State{" "}
+                  {!stateValidator && <span className="validator-star">*</span>}
+                </h2>
                 {/* <p>{state}</p> */}
                 <input
                   placeholder="add state"
@@ -193,7 +253,12 @@ function NewMyCarItem({ add }) {
             </div>
             <div className="mcic-inner-one">
               <div>
-                <h2>Country</h2>
+                <h2>
+                  Country{" "}
+                  {!countryValidator && (
+                    <span className="validator-star">*</span>
+                  )}
+                </h2>
                 <input
                   placeholder="add country"
                   value={countryField}
@@ -202,7 +267,12 @@ function NewMyCarItem({ add }) {
               </div>
             </div>
             <div>
-              <h2>Description</h2>
+              <h2>
+                Description{" "}
+                {!descriptionValidator && (
+                  <span className="validator-star">*</span>
+                )}
+              </h2>
               {/* <p className="mcic-decription-box">{description}</p> */}
               <textarea
                 placeholder="add description"
@@ -214,7 +284,10 @@ function NewMyCarItem({ add }) {
         </div>
         <div className="mcic-two">
           <div>
-            <h2>Price</h2>
+            <h2>
+              Price{" "}
+              {!priceValidator && <span className="validator-star">*</span>}
+            </h2>
             {/* <p>${price} / day</p> */}
             <input
               placeholder="add price"
@@ -224,7 +297,10 @@ function NewMyCarItem({ add }) {
             ></input>
           </div>
           <div>
-            <h2>Color</h2>
+            <h2>
+              Color{" "}
+              {!colorValidator && <span className="validator-star">*</span>}
+            </h2>
             <input
               placeholder="add Color"
               type="text"
