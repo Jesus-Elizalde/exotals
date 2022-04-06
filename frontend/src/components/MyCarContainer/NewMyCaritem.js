@@ -83,7 +83,7 @@ function NewMyCarItem({ add }) {
         <div>
           {imgInputList.map((x, i) => {
             return (
-              <div className="box">
+              <div className="box" key={i}>
                 <input
                   name="url"
                   placeholder="Enter Img Url"

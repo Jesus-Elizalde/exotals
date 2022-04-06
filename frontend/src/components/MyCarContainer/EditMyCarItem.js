@@ -49,8 +49,6 @@ function EditMyCarItem({ data, edit }) {
   );
   const [cylinderField, setCylinderField] = useState(+Cylinder?.id || "Na");
 
-  console.log(transmissonField, seatField, drivetrainField, cylinderField);
-
   const onSubmit = async () => {
     const results = {
       id,
