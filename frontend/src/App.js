@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 import * as sessionActions from "./store/session";
@@ -20,6 +20,8 @@ import "./App.css";
 function App() {
   const dispatch = useDispatch();
 
+  const user = useSelector((state) => state.session.user);
+
   const [isLoaded, setIsLoaded] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -35,7 +37,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 1000);
   }, [isLoaded]);
 
   return (
@@ -56,8 +58,13 @@ function App() {
               <HomeContainer />
             </Route>
             <Route path="/mycars">
-              <MyCarContainer />
+              {user !== undefined ? (
+                <MyCarContainer />
+              ) : (
+                <Redirect to="/welcome" />
+              )}
             </Route>
+
             <Route>
               <p>page not found</p>
             </Route>

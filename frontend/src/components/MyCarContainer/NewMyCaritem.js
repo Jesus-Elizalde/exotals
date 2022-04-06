@@ -3,8 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { AddOneCar } from "../../store/cars";
 
-import ImgUrl from "./ImgUrl";
-
 function NewMyCarItem({ add }) {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user);

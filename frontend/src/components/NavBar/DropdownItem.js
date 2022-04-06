@@ -43,6 +43,7 @@ function DropdownItem({ text }) {
       <>
         <a
           className="menu-item"
+          href={"/welcome"}
           onClick={() => dispatch(sessionActions.logout())}
         >
           {text}

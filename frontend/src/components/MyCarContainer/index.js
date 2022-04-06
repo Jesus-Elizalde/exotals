@@ -8,6 +8,7 @@ import "./MyCars.css";
 
 function MyCarContainer() {
   const { cars } = useSelector((state) => state.cars);
+  const user = useSelector((state) => state.session.user);
 
   const [addNewCar, setAddNewCar] = useState(false);
 
@@ -25,7 +26,10 @@ function MyCarContainer() {
       {addBoxContent}
       {allCarsArr
         .reverse()
-        .map((ele, i) => ele.userId === 1 && <MyCarItem key={i} data={ele} />)}
+        .map(
+          (ele, i) =>
+            ele.userId === user?.id && <MyCarItem key={i} data={ele} />
+        )}
       <div className="mycar-add">
         <p onClick={() => setAddNewCar(!addNewCar)}>+</p>
       </div>
