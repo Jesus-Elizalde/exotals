@@ -54,7 +54,8 @@ h2 {
   width: 275px;
   height: 405px;
   border-radius: 10px;
-  border: 1px solid;
+
+  object-fit: scale-down;
 }
 
 .mcic-two {
