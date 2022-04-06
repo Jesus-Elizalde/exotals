@@ -148,7 +148,7 @@ function NewMyCarItem({ add }) {
           <button onClick={() => onSubmit()}>Add</button>
         </div>
         <div>
-          <p className="reuqiretext">* - required (minium on price 251)</p>
+          <p className="requiredalert">* - required (minium on price 251)</p>
         </div>
       </div>
       <div className="mycar-item-container">
@@ -200,14 +200,12 @@ function NewMyCarItem({ add }) {
                         Remove
                       </button>
                     )}
-                    {imgInputList.length - 1 === i && (
-                      <button onClick={handleAddClick}>Add </button>
-                    )}
                   </div>
                 </div>
               );
             })}
           </div>
+          <button onClick={handleAddClick}>Add</button>
         </div>
         <div className="mcic-one">
           <div>

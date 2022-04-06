@@ -239,14 +239,12 @@ function EditMyCarItem({ data, edit }) {
                         Remove
                       </button>
                     )}
-                    {imgInputList.length - 1 === i && (
-                      <button onClick={handleAddClick}>Add</button>
-                    )}
                   </div>
                 </div>
               );
             })}
           </div>
+          <button onClick={handleAddClick}>Add</button>
         </div>
         <div className="mcic-one">
           <div>
