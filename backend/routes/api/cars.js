@@ -41,11 +41,26 @@ router.get(
 router.post(
   "/new",
   asyncHandler(async (req, res) => {
+    const formData = req.body;
     console.log(req.body, "++++++++=======++++++");
-    const data = await db.Car.build(req.body);
+    const data = await db.Car.build(formData);
     if (data) {
       await data.save();
 
+      const imgArr = formData.imageArr;
+
+      const imgData = [];
+      if (imgArr.length) {
+        for (const imgObj of imgArr) {
+          const newUrl = await db.Image.create({
+            url: imgObj.url,
+            carId: data.id,
+          });
+          if (newUrl) {
+            imgData.push(newUrl);
+          }
+        }
+      }
       res.json({ data });
     }
   })

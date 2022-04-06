@@ -12,12 +12,24 @@ function NewMyCarItem({ add }) {
   const models = useSelector((state) => state.models.models);
   const utilsdata = useSelector((state) => state.utildata.data.data);
 
-  const [addImgInput, setAddImgInput] = useState(5);
+  const [imgInputList, setImgInputList] = useState([{ url: "" }]);
 
-  const urlInputArr = [];
-  for (let i = 0; i < addImgInput; i++) {
-    urlInputArr.push(<ImgUrl remove={setAddImgInput} />);
-  }
+  const handleInputChange = (e, index) => {
+    const { name, value } = e.target;
+    const list = [...imgInputList];
+    list[index][name] = value;
+    setImgInputList(list);
+  };
+
+  const handleRemoveClick = (index) => {
+    const list = [...imgInputList];
+    list.splice(index, 1);
+    setImgInputList(list);
+  };
+
+  const handleAddClick = () => {
+    setImgInputList([...imgInputList, { url: "" }]);
+  };
 
   const { cylinders, transmissons, seats, drivetrains } = utilsdata;
 
@@ -36,8 +48,6 @@ function NewMyCarItem({ add }) {
   const [drivetrainField, setDrivetrainField] = useState(1);
   const [cylinderField, setCylinderField] = useState(1);
 
-  console.log(transmissonField, seatField, drivetrainField, cylinderField);
-
   const onSubmit = async () => {
     const results = {
       address: addressField,
@@ -53,9 +63,8 @@ function NewMyCarItem({ add }) {
       cylinderId: cylinderField,
       seatId: seatField,
       drivetrainId: drivetrainField,
+      imageArr: imgInputList,
     };
-
-    console.log(results);
 
     const data123 = await dispatch(AddOneCar(results));
 
@@ -71,7 +80,33 @@ function NewMyCarItem({ add }) {
         <button onClick={() => onSubmit()}>Add</button>
       </div>
       <div className="mycar-item-container">
-        <div>{urlInputArr}</div>
+        <div>
+          {imgInputList.map((x, i) => {
+            return (
+              <div className="box">
+                <input
+                  name="url"
+                  placeholder="Enter Img Url"
+                  value={x.url}
+                  onChange={(e) => handleInputChange(e, i)}
+                />
+                <div className="btn-box">
+                  {imgInputList.length !== 1 && (
+                    <button
+                      className="mr10"
+                      onClick={() => handleRemoveClick(i)}
+                    >
+                      Remove
+                    </button>
+                  )}
+                  {imgInputList.length - 1 === i && (
+                    <button onClick={handleAddClick}>Add</button>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
         <div className="mcic-one">
           <div>
             <div className="mcic-inner-one">
