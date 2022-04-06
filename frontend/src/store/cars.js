@@ -108,7 +108,7 @@ const carReducer = (state = initialState, action) => {
     case UPDATE_CAR:
       newState = Object.assign({}, state);
 
-      // newState.cars[action.data.id] = action.data;
+      newState.cars[action.payload.data.id] = action.payload.data;
 
       return newState;
     case DELETE_CAR:

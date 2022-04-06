@@ -99,19 +99,19 @@ function NotEditMyCarItem({ data, edit }) {
           </div>
           <div>
             <h2>Cylinder</h2>
-            <p>{Cylinder ? Cylinder.name : "NA"}</p>
+            <p>{Cylinder?.name}</p>
           </div>
           <div>
             <h2>Transmisson</h2>
-            <p>{Transmisson ? Transmisson.name : "NA"}</p>
+            <p>{Transmisson?.name}</p>
           </div>
           <div>
             <h2>Seats</h2>
-            <p>{Seat ? Seat.name : "NA"}</p>
+            <p>{Seat?.name}</p>
           </div>
           <div>
             <h2>Drivetrain</h2>
-            <p>{Drivetrain ? Drivetrain.name : "NA"}</p>
+            <p>{Drivetrain?.name}</p>
           </div>
         </div>
       </div>

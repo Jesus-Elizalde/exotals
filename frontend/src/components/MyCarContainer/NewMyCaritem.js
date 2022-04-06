@@ -11,6 +11,9 @@ function NewMyCarItem({ add }) {
   const utilsdata = useSelector((state) => state.utildata.data.data);
 
   const [imgInputList, setImgInputList] = useState([{ url: "" }]);
+  const [currentImg, setCurrentImg] = useState(0);
+
+  const collectionSize = imgInputList.length;
 
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
@@ -79,6 +82,26 @@ function NewMyCarItem({ add }) {
       </div>
       <div className="mycar-item-container">
         <div>
+          <img src={imgInputList[currentImg]?.url} className="mcic-img" />
+          <div>
+            <button
+              disabled={currentImg === 0}
+              onClick={() =>
+                setCurrentImg((prevActiveStep) => prevActiveStep - 1)
+              }
+            >
+              left
+            </button>
+            <button
+              disabled={currentImg === collectionSize - 1}
+              onClick={() =>
+                setCurrentImg((prevActiveStep) => prevActiveStep + 1)
+              }
+            >
+              right
+            </button>
+          </div>
+
           {imgInputList.map((x, i) => {
             return (
               <div className="box" key={i}>
