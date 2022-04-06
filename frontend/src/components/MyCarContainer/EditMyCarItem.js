@@ -191,8 +191,9 @@ function EditMyCarItem({ data, edit }) {
               {!imageValidator && <span className="validator-star">*</span>}
             </h2>
             <img src={imgInputList[currentImg]?.url} className="mcic-img" />
-            <div>
+            <div className="imgButtons">
               <button
+                className="imgleft"
                 disabled={currentImg === 0}
                 onClick={() =>
                   setCurrentImg((prevActiveStep) => prevActiveStep - 1)
@@ -200,7 +201,11 @@ function EditMyCarItem({ data, edit }) {
               >
                 left
               </button>
+              <p>
+                {currentImg + 1}/{collectionSize}
+              </p>
               <button
+                className="imgright"
                 disabled={currentImg === collectionSize - 1}
                 onClick={() =>
                   setCurrentImg((prevActiveStep) => prevActiveStep + 1)
@@ -210,31 +215,33 @@ function EditMyCarItem({ data, edit }) {
               </button>
             </div>
           </div>
-          {imgInputList.map((x, i) => {
-            return (
-              <div className="box" key={i}>
-                <input
-                  name="url"
-                  placeholder="Enter Img Url"
-                  value={x.url}
-                  onChange={(e) => handleInputChange(e, i)}
-                />
-                <div className="btn-box">
-                  {imgInputList.length !== 1 && (
-                    <button
-                      className="mr10"
-                      onClick={() => handleRemoveClick(i)}
-                    >
-                      Remove
-                    </button>
-                  )}
-                  {imgInputList.length - 1 === i && (
-                    <button onClick={handleAddClick}>Add</button>
-                  )}
+          <div className="imageinputs">
+            {imgInputList.map((x, i) => {
+              return (
+                <div className="box" key={i}>
+                  <input
+                    name="url"
+                    placeholder="Enter Img Url"
+                    value={x.url}
+                    onChange={(e) => handleInputChange(e, i)}
+                  />
+                  <div className="btn-box">
+                    {imgInputList.length !== 1 && (
+                      <button
+                        className="mr10"
+                        onClick={() => handleRemoveClick(i)}
+                      >
+                        Remove
+                      </button>
+                    )}
+                    {imgInputList.length - 1 === i && (
+                      <button onClick={handleAddClick}>Add</button>
+                    )}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
         <div className="mcic-one">
           <div>

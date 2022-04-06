@@ -54,7 +54,7 @@ h2 {
   width: 275px;
   height: 405px;
   border-radius: 10px;
-
+  border: 1px solid;
   object-fit: scale-down;
 }
 
@@ -71,4 +71,21 @@ h2 {
 
 .validator-star {
   color: red;
+}
+
+.imgButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.imgleft {
+}
+.imgright {
+}
+
+.imageinputs {
+  height: 86px;
+  overflow: scroll;
 }

@@ -30,8 +30,9 @@ function NotEditMyCarItem({ data, edit }) {
         <div>
           <h2>Images</h2>
           <img src={Images[currentImg]?.url} className="mcic-img" />
-          <div>
+          <div className="imgButtons">
             <button
+              className="imgleft"
               disabled={currentImg === 0}
               onClick={() =>
                 setCurrentImg((prevActiveStep) => prevActiveStep - 1)
@@ -39,7 +40,11 @@ function NotEditMyCarItem({ data, edit }) {
             >
               left
             </button>
+            <p>
+              {currentImg + 1}/{collectionSize}
+            </p>
             <button
+              className="imgright"
               disabled={currentImg === collectionSize - 1}
               onClick={() =>
                 setCurrentImg((prevActiveStep) => prevActiveStep + 1)
