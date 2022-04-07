@@ -5,12 +5,16 @@ import { useState, useEffect } from "react";
 
 import { AddOneCar } from "../../store/cars";
 
+import { Modal } from "../../context/Modal";
+
 function NewMyCarItem({ add }) {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user);
   const makes = useSelector((state) => state.makes.makes);
   const models = useSelector((state) => state.models.models);
   const utilsdata = useSelector((state) => state.utildata.data.data);
+
+  const [showModal, setShowModal] = useState(false);
 
   const [imgInputList, setImgInputList] = useState([{ url: "" }]);
   const [currentImg, setCurrentImg] = useState(0);
@@ -67,6 +71,8 @@ function NewMyCarItem({ add }) {
   const [descriptionValidator, setDescriptionValidator] = useState(true);
   const [imageValidator, setImageValidator] = useState(true);
 
+  const [errValidators, setErrValidators] = useState([]);
+
   useEffect(() => {
     setAddressValidator(true);
     setCityValidator(true);
@@ -77,20 +83,47 @@ function NewMyCarItem({ add }) {
     setDescriptionValidator(true);
     setImageValidator(true);
 
+    const errors = [];
+
     for (const item of imgInputList) {
       if (item.url) {
         break;
       }
+      errors.push("Please add at least one Image");
       setImageValidator(false);
     }
 
-    if (!addressField.length) setAddressValidator(false);
-    if (!cityField.length) setCityValidator(false);
-    if (!stateField.length) setStateValidator(false);
-    if (!countryField.length) setCountryValidator(false);
-    if (priceField < 250) setPriceValidator(false);
-    if (!colorField.length) setColorValidator(false);
-    if (!descriptionField.length) setDescriptionValidator(false);
+    if (!addressField.length) {
+      errors.push("Please Enter a Address");
+      setAddressValidator(false);
+    }
+    if (!cityField.length) {
+      errors.push("Please Enter a City");
+      setCityValidator(false);
+    }
+    if (!stateField.length) {
+      errors.push("Please Enter a State");
+      setStateValidator(false);
+    }
+    if (!countryField.length) {
+      errors.push("Please Enter a Country");
+      setCountryValidator(false);
+    }
+    if (priceField <= 250) {
+      errors.push("Please Enter a Price Over 250");
+      setPriceValidator(false);
+    }
+    if (!colorField.length) {
+      errors.push("Please Enter a Color");
+      setColorValidator(false);
+    }
+    if (!descriptionField.length) {
+      errors.push("Please Enter a Decription");
+      setDescriptionValidator(false);
+    }
+
+    setErrValidators(errors);
+    console.log(errValidators);
   }, [
     addressField,
     cityField,
@@ -113,7 +146,7 @@ function NewMyCarItem({ add }) {
       !descriptionValidator ||
       !imageValidator
     ) {
-      console.log("validator false");
+      setShowModal(true);
       return;
     }
     const results = {
@@ -146,6 +179,17 @@ function NewMyCarItem({ add }) {
         <div>
           <button onClick={() => add(false)}>Cancel</button>
           <button onClick={() => onSubmit()}>Add</button>
+          {showModal && (
+            <Modal onClose={() => setShowModal(false)}>
+              <div>
+                <ul>
+                  {errValidators.map((ele, i) => {
+                    return <li key={i}>{ele}</li>;
+                  })}
+                </ul>
+              </div>
+            </Modal>
+          )}
         </div>
         <div>
           <p className="requiredalert">* - required (minium on price 251)</p>
