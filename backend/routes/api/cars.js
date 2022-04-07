@@ -26,6 +26,9 @@ router.get(
           model: db.Drivetrain,
         },
         {
+          model: db.User,
+        },
+        {
           model: db.Model,
           include: db.Make,
           order: [[("createdAt", "DESC")]],
@@ -124,6 +127,9 @@ router.put(
         },
         {
           model: db.Drivetrain,
+        },
+        {
+          model: db.User,
         },
         {
           model: db.Model,

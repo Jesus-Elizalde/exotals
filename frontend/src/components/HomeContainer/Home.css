@@ -15,6 +15,7 @@
   width: 302px;
   border-radius: 10px;
   border: 1px solid;
+  object-fit: cover;
 }
 
 .address-price-title {

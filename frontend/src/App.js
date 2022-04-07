@@ -13,6 +13,7 @@ import Loading from "./components/Loading";
 import WelcomeContainer from "./components/WelcomeContainer";
 import HomeContainer from "./components/HomeContainer";
 import MyCarContainer from "./components/MyCarContainer";
+import DetailContainer from "./components/DetailContainer";
 import Footer from "./components/Footer/Footer";
 
 import "./App.css";
@@ -64,7 +65,9 @@ function App() {
                 <Redirect to="/welcome" />
               )}
             </Route>
-
+            <Route to="/cars/:id">
+              <DetailContainer />
+            </Route>
             <Route>
               <p>page not found</p>
             </Route>
