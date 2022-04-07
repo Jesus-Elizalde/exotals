@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 
@@ -13,6 +13,8 @@ const ReviewHolder = ({ setreviewmode, reviewmode, setreviewid }) => {
   const getAllReviews = useSelector((state) => state.reviews);
   const user = useSelector((state) => state.session.user);
 
+  const [deleteConfirm, setDeleteConfirm] = useState(false);
+
   return (
     <div className="reviewconatinermodal">
       {Object.values(getAllReviews)
@@ -26,24 +28,41 @@ const ReviewHolder = ({ setreviewmode, reviewmode, setreviewid }) => {
               </div>
               {user?.id === ele.userId && (
                 <div className="revieweditdel">
-                  <button
-                    onClick={() => {
-                      setreviewmode(true);
+                  {!deleteConfirm ? (
+                    <>
+                      <button
+                        onClick={() => {
+                          setreviewmode(!reviewmode);
 
-                      setreviewid(ele.id);
-                    }}
-                  >
-                    Edit
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setreviewmode(true);
-                      dispatch(deleteOneReview(ele.id));
-                    }}
-                  >
-                    Delete
-                  </button>
+                          setreviewid(ele.id);
+                        }}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setDeleteConfirm(true);
+                        }}
+                      >
+                        Delete
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      <p>Are you sure you want to delete</p>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setreviewmode(false);
+                          dispatch(deleteOneReview(ele.id));
+                          setDeleteConfirm(false);
+                        }}
+                      >
+                        Delete
+                      </button>
+                    </>
+                  )}
                 </div>
               )}
             </div>
@@ -51,7 +70,7 @@ const ReviewHolder = ({ setreviewmode, reviewmode, setreviewid }) => {
             <div>
               <p>by {ele.User?.username}</p>
               {ele.createdAt === ele.updatedAt ? (
-                <p>Created: {ele.createdAt} </p>
+                <p>Created: {ele.createdAt.slice(0, 10)} </p>
               ) : (
                 <p>Updated: {ele.updatedAt} </p>
               )}

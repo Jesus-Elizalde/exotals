@@ -51,7 +51,12 @@ const CommentForm = ({ addreview }) => {
         <textarea
           value={review}
           onChange={(e) => setReview(e.target.value)}
-          style={{ height: "280px" }}
+          style={{
+            maxHeight: "100px",
+            height: "100px",
+            maxWidth: "250px",
+            width: "250px",
+          }}
         />
         <button disabled={errValidator.length} onClick={onSubmit}>
           Post Review

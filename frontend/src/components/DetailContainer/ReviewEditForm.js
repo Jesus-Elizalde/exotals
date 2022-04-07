@@ -46,7 +46,12 @@ const ReviewEditForm = ({ reviewid, setreviewmode }) => {
         <textarea
           value={review}
           onChange={(e) => setReview(e.target.value)}
-          style={{ height: "280px" }}
+          style={{
+            maxHeight: "100px",
+            height: "100px",
+            maxWidth: "250px",
+            width: "250px",
+          }}
         />
         <div>
           <button type="button" onClick={() => setreviewmode(false)}>
@@ -56,6 +61,13 @@ const ReviewEditForm = ({ reviewid, setreviewmode }) => {
             Edit Review
           </button>
         </div>
+        <ul>
+          {errValidator.map((ele, i) => (
+            <li key={i} style={{ color: "red" }}>
+              {ele}
+            </li>
+          ))}
+        </ul>
       </form>
     </div>
   );
