@@ -18,7 +18,10 @@ export default function NavBar({ isLoaded }) {
                 {<Logo />}
               </a>
             </li>
-            <NavItem icon={<ProflieIcon />} isLoaded={isLoaded} />
+            <div style={{ display: "flex", alignItem: "center" }}>
+              <a href="/home">Home</a>
+              <NavItem icon={<ProflieIcon />} isLoaded={isLoaded} />
+            </div>
           </>
         }
       </ul>
