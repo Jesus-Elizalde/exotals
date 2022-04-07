@@ -27,7 +27,14 @@ const ReviewMainPreview = () => {
               </div> */}
             </div>
             <p className="reviewsinglebox">{ele.review}</p>
-            <div>createdat</div>
+            <div>
+              <p>by {ele.User?.username}</p>
+              {ele.createdAt === ele.updatedAt ? (
+                <p>Created: {ele.createdAt.slice(0, 10)} </p>
+              ) : (
+                <p>Updated: {ele.updatedAt} </p>
+              )}
+            </div>
           </div>
         ))}
     </div>

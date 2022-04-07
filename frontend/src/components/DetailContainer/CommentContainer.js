@@ -13,11 +13,6 @@ const CommentContainer = () => {
     <div className="comment_form_container">
       <div>
         <h1>* 4.2 # reviews</h1>
-        {/* {reviewMode ? (
-          <CommentForm />
-        ) : (
-          <ReviewEditForm reviewid={reviewId} setreviewmode={setReviewMode} />
-        )} */}
         <button
           onClick={() => {
             setMakeReview(!makeReview);

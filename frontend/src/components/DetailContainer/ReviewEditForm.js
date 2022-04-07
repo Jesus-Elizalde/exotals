@@ -34,6 +34,8 @@ const ReviewEditForm = ({ reviewid, setreviewmode }) => {
 
     dispatch(updateOneReview(results));
 
+    setreviewmode(false);
+
     setRating(0);
     setReview("");
   };

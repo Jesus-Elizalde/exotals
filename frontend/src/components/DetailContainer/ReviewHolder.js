@@ -72,7 +72,7 @@ const ReviewHolder = ({ setreviewmode, reviewmode, setreviewid }) => {
               {ele.createdAt === ele.updatedAt ? (
                 <p>Created: {ele.createdAt.slice(0, 10)} </p>
               ) : (
-                <p>Updated: {ele.updatedAt} </p>
+                <p>Updated: {ele.updatedAt.slice(0, 10)} </p>
               )}
             </div>
           </div>
