@@ -2,6 +2,7 @@ import React from "react";
 import CommentForm from "./CommentForm";
 
 import "./Comments.css";
+import ReviewHolder from "./ReviewHolder";
 
 const CommentContainer = () => {
   return (
@@ -10,7 +11,9 @@ const CommentContainer = () => {
         <h1>* 4.2 # reviews</h1>
         <CommentForm />
       </div>
-      <div></div>
+      <div>
+        <ReviewHolder />
+      </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@
   width: 1000px;
   height: 550px;
   padding: 10px;
+  display: flex;
 }
 
 .on {
@@ -16,4 +17,24 @@
   flex-direction: column;
   width: 250px;
   height: 150px;
+}
+.reviewholdersingler {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  width: 550px;
+  height: 250px;
+}
+
+.reviewholdersinglerheader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviewholdersinglereditdelbtn {
+  display: flex;
+}
+.reviewconatinermodal {
+  height: 500px;
+  overflow: scroll;
 }
