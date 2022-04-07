@@ -1,15 +1,17 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 
-const ReviewHolder = () => {
+import RatingStar from "./RatingStar";
+
+import { deleteOneReview } from "../../store/reviews";
+
+const ReviewHolder = ({ setreviewmode, reviewmode, setreviewid }) => {
+  const dispatch = useDispatch();
   const { pathname } = useLocation();
   const carId = pathname.split("/").at(-1);
   const getAllReviews = useSelector((state) => state.reviews);
-  console.log(
-    "🚀 ~ file: ReviewHolder.js ~ line 9 ~ ReviewHolder ~ getAllReviews",
-    getAllReviews
-  );
+  const user = useSelector((state) => state.session.user);
 
   return (
     <div className="reviewconatinermodal">
@@ -18,14 +20,41 @@ const ReviewHolder = () => {
         .map((ele, i) => (
           <div key={i} className="reviewholdersingler">
             <div className="reviewholdersinglerheader">
-              <h3>{ele.rating}</h3>
-              <div className="revieweditdel">
-                <button>Edit</button>
-                <button>Delete</button>
+              <div>
+                <h3>{ele.rating}</h3>
+                <RatingStar rating={ele.rating} />
               </div>
+              {user?.id === ele.userId && (
+                <div className="revieweditdel">
+                  <button
+                    onClick={() => {
+                      setreviewmode(!reviewmode);
+
+                      setreviewid(ele.id);
+                    }}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    onClick={() => {
+                      setreviewmode(true);
+                      dispatch(deleteOneReview(ele.id));
+                    }}
+                  >
+                    Delete
+                  </button>
+                </div>
+              )}
             </div>
             <p className="reviewsinglebox">{ele.review}</p>
-            <div>createdat</div>
+            <div>
+              <p>by {ele.User?.username}</p>
+              {ele.createdAt === ele.updatedAt ? (
+                <p>{ele.createdAt} </p>
+              ) : (
+                <p>{ele.updatedAt} </p>
+              )}
+            </div>
           </div>
         ))}
     </div>

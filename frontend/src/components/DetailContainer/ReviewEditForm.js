@@ -4,18 +4,15 @@ import { useLocation } from "react-router-dom";
 
 import RatingStar from "./RatingStar";
 
-import { createReview } from "../../store/reviews";
+import { updateOneReview } from "../../store/reviews";
 
-const CommentForm = () => {
-  const { pathname } = useLocation();
-  const carId = pathname.split("/").at(-1);
-
+const ReviewEditForm = ({ reviewid, setreviewmode }) => {
   const dispatch = useDispatch();
 
-  const { id } = useSelector((state) => state.session.user);
+  const reviewData = useSelector((state) => state.reviews)[reviewid];
 
-  const [rating, setRating] = useState(0);
-  const [review, setReview] = useState("");
+  const [rating, setRating] = useState(reviewData.rating);
+  const [review, setReview] = useState(reviewData.review);
   const [errValidator, setErrValidator] = useState([]);
 
   useEffect(() => {
@@ -32,11 +29,10 @@ const CommentForm = () => {
     const results = {
       review,
       rating,
-      userId: id,
-      carId,
+      id: reviewid,
     };
 
-    dispatch(createReview(results));
+    dispatch(updateOneReview(results));
 
     setRating(0);
     setReview("");
@@ -48,12 +44,17 @@ const CommentForm = () => {
         <label>Review</label>
         <RatingStar rating={rating} setrating={setRating} />
         <textarea value={review} onChange={(e) => setReview(e.target.value)} />
-        <button disabled={errValidator.length} onClick={onSubmit}>
-          Post Review
-        </button>
+        <div>
+          <button type="button" onClick={() => setreviewmode(true)}>
+            Cancel
+          </button>
+          <button disabled={errValidator.length} onClick={onSubmit}>
+            Edit Review
+          </button>
+        </div>
       </form>
     </div>
   );
 };
 
-export default CommentForm;
+export default ReviewEditForm;

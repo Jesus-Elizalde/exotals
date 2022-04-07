@@ -2,6 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 
+import RatingStar from "./RatingStar";
+
 const ReviewMainPreview = () => {
   const { pathname } = useLocation();
   const carId = pathname.split("/").at(-1);
@@ -15,7 +17,10 @@ const ReviewMainPreview = () => {
         .map((ele, i) => (
           <div key={i} className="reviewholdersingler">
             <div className="reviewholdersinglerheader">
-              <h3>{ele.rating}</h3>
+              <div>
+                <h3>{ele.rating}</h3>
+                <RatingStar rating={ele.rating} />
+              </div>
               {/* <div className="revieweditdel">
                 <button>Edit</button>
                 <button>Delete</button>
