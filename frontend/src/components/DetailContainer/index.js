@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 
+import { Modal } from "../../context/Modal";
+
 import ImagesPreview from "./ImagesPreview";
 import CarDetailBook from "./CarDetailBook";
+import CommentContainer from "./CommentContainer.js";
 
 import "./DetailContainer.css";
 function DetailContainer() {
@@ -13,6 +16,8 @@ function DetailContainer() {
   const carId = pathname.split("/").at(-1);
   const singleCar = cars[carId];
   console.log("🚀 ", singleCar);
+
+  const [showModel, setShowModal] = useState(false);
 
   return (
     <div className="detail_body">
@@ -29,7 +34,18 @@ function DetailContainer() {
               </p>
             </div>
             <div className="detail_right_subheader">
-              <p>add Review</p>
+              <button
+                onClick={() => {
+                  setShowModal(true);
+                }}
+              >
+                add Review
+              </button>
+              {showModel && (
+                <Modal onClose={() => setShowModal(false)}>
+                  <CommentContainer />
+                </Modal>
+              )}
               <p>save</p>
             </div>
           </div>

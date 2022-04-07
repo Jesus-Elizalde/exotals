@@ -6,6 +6,7 @@ import carReducer from "./cars";
 import makeReducer from "./makes";
 import modelReducer from "./models";
 import utilDataReducer from "./utildata";
+import reviewReducer from "./reviews";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   makes: makeReducer,
   models: modelReducer,
   utildata: utilDataReducer,
+  reviews: reviewReducer,
 });
 
 let enhancer;

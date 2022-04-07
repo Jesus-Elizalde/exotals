@@ -6,6 +6,7 @@ const carsRouter = require("./cars.js");
 const makesRouter = require("./makes");
 const modelsRouter = require("./models");
 const utildataRouter = require("./utilData");
+const reviewsRouter = require("./reviews");
 
 router.use("/session", sessionRouter);
 
@@ -18,5 +19,7 @@ router.use("/makes", makesRouter);
 router.use("/models", modelsRouter);
 
 router.use("/utildata", utildataRouter);
+
+router.use("/reviews", reviewsRouter);
 
 module.exports = router;

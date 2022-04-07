@@ -1,0 +1,19 @@
+.comment_form_container {
+  width: 1000px;
+  height: 550px;
+  padding: 10px;
+}
+
+.on {
+  color: #000;
+}
+.off {
+  color: #ccc;
+}
+
+.comment_form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 150px;
+}

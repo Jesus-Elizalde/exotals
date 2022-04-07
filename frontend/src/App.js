@@ -7,6 +7,7 @@ import * as carsActions from "./store/cars";
 import * as makesActions from "./store/makes";
 import * as modelsActions from "./store/models";
 import * as utildataAction from "./store/utildata";
+import * as reviewsAction from "./store/reviews";
 
 import NavBar from "./components/NavBar";
 import Loading from "./components/Loading";
@@ -32,6 +33,7 @@ function App() {
     dispatch(makesActions.getAllMakes());
     dispatch(modelsActions.getAllModels());
     dispatch(utildataAction.getAllUtilData());
+    dispatch(reviewsAction.getAllReviews());
   }, [dispatch]);
 
   useEffect(() => {
