@@ -28,7 +28,7 @@ const ReviewHolder = ({ setreviewmode, reviewmode, setreviewid }) => {
                 <div className="revieweditdel">
                   <button
                     onClick={() => {
-                      setreviewmode(!reviewmode);
+                      setreviewmode(true);
 
                       setreviewid(ele.id);
                     }}
@@ -36,6 +36,7 @@ const ReviewHolder = ({ setreviewmode, reviewmode, setreviewid }) => {
                     Edit
                   </button>
                   <button
+                    type="button"
                     onClick={() => {
                       setreviewmode(true);
                       dispatch(deleteOneReview(ele.id));
@@ -50,9 +51,9 @@ const ReviewHolder = ({ setreviewmode, reviewmode, setreviewid }) => {
             <div>
               <p>by {ele.User?.username}</p>
               {ele.createdAt === ele.updatedAt ? (
-                <p>{ele.createdAt} </p>
+                <p>Created: {ele.createdAt} </p>
               ) : (
-                <p>{ele.updatedAt} </p>
+                <p>Updated: {ele.updatedAt} </p>
               )}
             </div>
           </div>

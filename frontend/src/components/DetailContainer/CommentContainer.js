@@ -6,15 +6,27 @@ import ReviewHolder from "./ReviewHolder";
 import ReviewEditForm from "./ReviewEditForm";
 
 const CommentContainer = () => {
-  const [reviewMode, setReviewMode] = useState(true);
+  const [makeReview, setMakeReview] = useState(false);
+  const [reviewMode, setReviewMode] = useState(false);
   const [reviewId, setReviewId] = useState(null);
   return (
     <div className="comment_form_container">
       <div>
         <h1>* 4.2 # reviews</h1>
-        {reviewMode ? (
+        {/* {reviewMode ? (
           <CommentForm />
         ) : (
+          <ReviewEditForm reviewid={reviewId} setreviewmode={setReviewMode} />
+        )} */}
+        <button
+          onClick={() => {
+            setMakeReview(!makeReview);
+          }}
+        >
+          Make a Review
+        </button>
+        {makeReview && <CommentForm addreview={setMakeReview} />}
+        {reviewMode && (
           <ReviewEditForm reviewid={reviewId} setreviewmode={setReviewMode} />
         )}
       </div>

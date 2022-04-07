@@ -6,7 +6,7 @@ import RatingStar from "./RatingStar";
 
 import { createReview } from "../../store/reviews";
 
-const CommentForm = () => {
+const CommentForm = ({ addreview }) => {
   const { pathname } = useLocation();
   const carId = pathname.split("/").at(-1);
 
@@ -20,8 +20,8 @@ const CommentForm = () => {
 
   useEffect(() => {
     const errors = [];
-    if (rating < 1) errors.push("Rating from 1 to 5");
-    if (!review.length) errors.push("Review textbox cannot be empty");
+    if (rating < 1) errors.push("Rating required");
+    if (!review.length) errors.push("Review box cannot be empty");
 
     setErrValidator(errors);
   }, [rating, review]);
@@ -38,6 +38,7 @@ const CommentForm = () => {
 
     dispatch(createReview(results));
 
+    addreview(false);
     setRating(0);
     setReview("");
   };
@@ -45,12 +46,23 @@ const CommentForm = () => {
   return (
     <div>
       <form className="comment_form">
-        <label>Review</label>
+        <label>Make a Review</label>
         <RatingStar rating={rating} setrating={setRating} />
-        <textarea value={review} onChange={(e) => setReview(e.target.value)} />
+        <textarea
+          value={review}
+          onChange={(e) => setReview(e.target.value)}
+          style={{ height: "280px" }}
+        />
         <button disabled={errValidator.length} onClick={onSubmit}>
           Post Review
         </button>
+        <ul>
+          {errValidator.map((ele, i) => (
+            <li key={i} style={{ color: "red" }}>
+              {ele}
+            </li>
+          ))}
+        </ul>
       </form>
     </div>
   );

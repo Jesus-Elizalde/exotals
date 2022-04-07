@@ -41,11 +41,15 @@ const ReviewEditForm = ({ reviewid, setreviewmode }) => {
   return (
     <div>
       <form className="comment_form">
-        <label>Review</label>
+        <label>Edit Review</label>
         <RatingStar rating={rating} setrating={setRating} />
-        <textarea value={review} onChange={(e) => setReview(e.target.value)} />
+        <textarea
+          value={review}
+          onChange={(e) => setReview(e.target.value)}
+          style={{ height: "280px" }}
+        />
         <div>
-          <button type="button" onClick={() => setreviewmode(true)}>
+          <button type="button" onClick={() => setreviewmode(false)}>
             Cancel
           </button>
           <button disabled={errValidator.length} onClick={onSubmit}>
