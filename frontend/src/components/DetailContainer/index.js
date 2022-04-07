@@ -7,6 +7,7 @@ import { Modal } from "../../context/Modal";
 import ImagesPreview from "./ImagesPreview";
 import CarDetailBook from "./CarDetailBook";
 import CommentContainer from "./CommentContainer.js";
+import ReviewMainPreview from "./ReviewMainPreview";
 
 import "./DetailContainer.css";
 function DetailContainer() {
@@ -51,6 +52,10 @@ function DetailContainer() {
           </div>
           <ImagesPreview images={singleCar?.Images} />
           <CarDetailBook singleCar={singleCar} />
+          <div>
+            <h3>Reviews</h3>
+            <ReviewMainPreview />
+          </div>
         </div>
       </div>
     </div>

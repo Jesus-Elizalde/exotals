@@ -93,3 +93,8 @@
   width: 420px;
   height: 250px;
 }
+
+.reviewcontainerpreview {
+  display: flex;
+  flex-wrap: wrap;
+}
