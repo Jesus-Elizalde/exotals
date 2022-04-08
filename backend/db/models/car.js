@@ -34,6 +34,12 @@ module.exports = (sequelize, DataTypes) => {
     Car.belongsTo(models.Cylinder, { foreignKey: "cylinderId" });
     Car.belongsTo(models.Seat, { foreignKey: "seatId" });
     Car.belongsTo(models.Drivetrain, { foreignKey: "drivetrainId" });
+
+    Car.belongsToMany(models.User, {
+      through: "Favorites",
+      otherKey: "userId",
+      foreignKey: "carId",
+    });
   };
   return Car;
 };

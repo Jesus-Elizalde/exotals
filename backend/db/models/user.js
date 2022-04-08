@@ -55,6 +55,11 @@ module.exports = (sequelize, DataTypes) => {
     User.hasMany(models.Car, { foreignKey: "userId" });
     User.hasMany(models.Review, { foreignKey: "userId" });
     User.hasMany(models.Booking, { foreignKey: "userId" });
+    User.belongsToMany(models.Car, {
+      through: "Favorites",
+      otherKey: "carId",
+      foreignKey: "userId",
+    });
   };
 
   User.prototype.toSafeObject = function () {

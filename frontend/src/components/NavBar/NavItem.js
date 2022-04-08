@@ -10,6 +10,7 @@ function NavItem({ icon, isLoaded }) {
       <a className="icon-button" onClick={() => setOpen(!open)}>
         {icon}
       </a>
+
       {open && <DropdownMenu isLoaded={isLoaded} />}
     </li>
   );
