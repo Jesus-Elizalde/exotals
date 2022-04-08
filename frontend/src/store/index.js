@@ -7,6 +7,7 @@ import makeReducer from "./makes";
 import modelReducer from "./models";
 import utilDataReducer from "./utildata";
 import reviewReducer from "./reviews";
+import favoriteReducer from "./favorites";
 
 const rootReducer = combineReducers({
   session: sessionReducer,
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   models: modelReducer,
   utildata: utilDataReducer,
   reviews: reviewReducer,
+  favorites: favoriteReducer,
 });
 
 let enhancer;

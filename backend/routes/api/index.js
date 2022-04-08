@@ -7,6 +7,7 @@ const makesRouter = require("./makes");
 const modelsRouter = require("./models");
 const utildataRouter = require("./utilData");
 const reviewsRouter = require("./reviews");
+const favoritesRouter = require("./favorites");
 
 router.use("/session", sessionRouter);
 
@@ -21,5 +22,7 @@ router.use("/models", modelsRouter);
 router.use("/utildata", utildataRouter);
 
 router.use("/reviews", reviewsRouter);
+
+router.use("/favorites", favoritesRouter);
 
 module.exports = router;

@@ -8,6 +8,7 @@ import * as makesActions from "./store/makes";
 import * as modelsActions from "./store/models";
 import * as utildataAction from "./store/utildata";
 import * as reviewsAction from "./store/reviews";
+import * as favoritesAction from "./store/favorites";
 
 import NavBar from "./components/NavBar";
 import Loading from "./components/Loading";
@@ -23,6 +24,7 @@ function App() {
   const dispatch = useDispatch();
 
   const user = useSelector((state) => state.session.user);
+  console.log("🚀 ~ file: App.js ~ line 27 ~ App ~ user", user);
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -34,6 +36,7 @@ function App() {
     dispatch(modelsActions.getAllModels());
     dispatch(utildataAction.getAllUtilData());
     dispatch(reviewsAction.getAllReviews());
+    dispatch(favoritesAction.getAllFav());
   }, [dispatch]);
 
   useEffect(() => {
