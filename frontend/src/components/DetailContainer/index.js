@@ -17,6 +17,7 @@ function DetailContainer() {
   const { pathname } = useLocation();
   const cars = useSelector((state) => state.cars.cars);
   const makes = useSelector((state) => state.makes.makes);
+  const user = useSelector((state) => state.session.user);
   const carId = pathname.split("/").at(-1);
   const singleCar = cars[carId];
 
@@ -55,7 +56,7 @@ function DetailContainer() {
                   <CommentContainer />
                 </Modal>
               )}
-              <FavoriteHeart />
+              {user?.id && <FavoriteHeart />}
               {/* <button onClick={addToFav}>Add to Favorite</button>
               <button>Remove to Favorite</button> */}
             </div>
