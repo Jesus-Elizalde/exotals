@@ -17,6 +17,7 @@ router.post(
   "/new",
   asyncHandler(async (req, res) => {
     const data = await db.Favorite.build(req.body);
+
     if (data) {
       await data.save();
       res.json(data);
@@ -29,10 +30,16 @@ router.delete(
   asyncHandler(async (req, res) => {
     const { id } = req.params;
 
-    const data = await db.Favorite.findByPk(id);
+    const data = await db.Favorite.findAll({
+      where: {
+        userId: req.body.userId,
+        carId: req.body.carId,
+      },
+    });
 
     if (data) {
-      await data.destroy();
+      data.forEach(async (ele) => await ele.destroy());
+
       res.json(id);
     }
   })

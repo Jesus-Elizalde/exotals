@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 
 import { Modal } from "../../context/Modal";
@@ -8,6 +8,9 @@ import ImagesPreview from "./ImagesPreview";
 import CarDetailBook from "./CarDetailBook";
 import CommentContainer from "./CommentContainer.js";
 import ReviewMainPreview from "./ReviewMainPreview";
+import FavoriteHeart from "../FavoriteHeart";
+
+import { addOneFav } from "../../store/favorites";
 
 import "./DetailContainer.css";
 function DetailContainer() {
@@ -16,9 +19,14 @@ function DetailContainer() {
   const makes = useSelector((state) => state.makes.makes);
   const carId = pathname.split("/").at(-1);
   const singleCar = cars[carId];
-  console.log("🚀 ", singleCar);
+
+  const dispatch = useDispatch();
 
   const [showModel, setShowModal] = useState(false);
+
+  const addToFav = () => {
+    dispatch(addOneFav({ userId: 1, carId: 1 }));
+  };
 
   return (
     <div className="detail_body">
@@ -47,7 +55,9 @@ function DetailContainer() {
                   <CommentContainer />
                 </Modal>
               )}
-              <p>save</p>
+              <FavoriteHeart />
+              {/* <button onClick={addToFav}>Add to Favorite</button>
+              <button>Remove to Favorite</button> */}
             </div>
           </div>
           <ImagesPreview images={singleCar?.Images} />

@@ -36,17 +36,21 @@ export const addOneFav = (favorite) => async (dispatch) => {
 
   if (response.ok) {
     const data = await response.json();
-    dispatch(getAllFav(data.userId));
+    dispatch(getAllFav());
     return data;
   }
 };
 
-export const deleteOneFav = (favId) => async (dispatch) => {
-  const response = await csrfFetch(`/api/favorites/${favId}/delete`);
+export const deleteOneFav = (fav) => async (dispatch) => {
+  const response = await csrfFetch(`/api/favorites/${fav.id}/delete`, {
+    method: "DELETE",
+    body: JSON.stringify(fav),
+  });
 
   if (response.ok) {
     const data = await response.json();
-    dispatch(deleteFav(data));
+    // dispatch(deleteFav(data));
+    dispatch(getAllFav());
     return data;
   }
 };

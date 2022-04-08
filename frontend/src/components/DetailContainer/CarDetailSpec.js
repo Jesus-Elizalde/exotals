@@ -9,10 +9,6 @@ import { ReactComponent as RearWheelIcon } from "../../svg/rearwheelicon.svg";
 import { ReactComponent as FrontWheelIcon } from "../../svg/frontwheelicon.svg";
 
 const CarDetailSpec = ({ singleCar }) => {
-  console.log(
-    "🚀 ~ file: carDetailSpec.js ~ line 11 ~ CarDetailSpec ~ singleCar",
-    singleCar
-  );
   return (
     <div className="detail_spec_box">
       <h3>Car Spec</h3>

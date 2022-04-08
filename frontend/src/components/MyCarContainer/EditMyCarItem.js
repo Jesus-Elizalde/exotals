@@ -141,7 +141,6 @@ function EditMyCarItem({ data, edit }) {
     }
 
     setErrValidators(errors);
-    console.log(errValidators);
   }, [
     addressField,
     cityField,

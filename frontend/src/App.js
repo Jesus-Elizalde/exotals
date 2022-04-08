@@ -24,7 +24,6 @@ function App() {
   const dispatch = useDispatch();
 
   const user = useSelector((state) => state.session.user);
-  console.log("🚀 ~ file: App.js ~ line 27 ~ App ~ user", user);
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [loading, setLoading] = useState(false);

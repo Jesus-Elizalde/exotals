@@ -123,7 +123,6 @@ function NewMyCarItem({ add }) {
     }
 
     setErrValidators(errors);
-    console.log(errValidators);
   }, [
     addressField,
     cityField,
