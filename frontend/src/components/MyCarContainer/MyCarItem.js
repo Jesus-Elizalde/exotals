@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import NotEditMyCarItem from "./NotEditMyCarItem";
 import EditMyCarItem from "./EditMyCarItem";
+import { useDispatch } from "react-redux";
+
+import * as carsActions from "../../store/cars";
 
 function MyCarItem({ data }) {
   const [editMode, setEditMode] = useState(false);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(carsActions.getAllCars());
+  }, [editMode]);
 
   let content;
   if (!editMode) {
