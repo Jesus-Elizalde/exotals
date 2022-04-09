@@ -10,7 +10,7 @@ module.exports = {
       },
       url: {
         allowNull: false,
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
       },
       carId: {
         allowNull: false,

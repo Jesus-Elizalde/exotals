@@ -69,7 +69,8 @@
 }
 
 .nonfuction {
-  color: red;
+  /* color: red; */
+  font-weight: bold;
   transition: none;
 }
 .nonfuction:hover {
@@ -79,4 +80,6 @@
 .rightnavbartext {
   display: flex;
   align-items: center;
+  width: 846px;
+  justify-content: space-between;
 }

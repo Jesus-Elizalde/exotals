@@ -1,0 +1,374 @@
+[
+  {
+    "modelId": 349,
+    "color": "white",
+    "price": 2500,
+    "description": "With up to 600-hp under its hood, the 2022 Nissan GT-R is a powerful and tenacious-handling sports car that earns its nickname of Godzilla. Unfortunately, its formula hasn't changed much since it was introduced in 2009 but the sports cars it competes with have. Inside is where the GT-R's age becomes more apparent, with an outdated design and down-market materials that are shared with lesser Nissan models. The GT-R does have several things going for it though. For one thing, all-wheel drive is standard on every model which helps with handling and gives the car a planted, confident feel. Plus, it's more rare than a Porsche 911, so you'll stand out in traffic or at your next track day.",
+    "images": [
+      "https://www.motorious.com/content/images/2021/05/30.jpg",
+      "https://www.sema.org/sites/default/files/i-3FbgCjT-X4.jpg",
+      "https://assets.whichcar.com.au/image/upload/s--TuD5RpvQ--/c_fill,f_auto,q_auto:good/v1/archive/motor/2018/02/21/Misc/Nissan-GT-R-Nismo-Performance-Car-of-the-Year-2018-performance-feature.jpg",
+      "https://miro.medium.com/max/1400/0*bsOy3sCRFC47UoRA.jpg",
+      "https://i.ytimg.com/vi/rhEcxAmcQg8/maxresdefault.jpg"
+    ]
+  },
+  {
+    "modelId": 334,
+    "color": "white",
+    "price": 25000,
+    "description": "Some emails are better than others. Case in point, when the Bugatti public relations person asks if you'd like to compare and contrast the Bugatti Chiron Sport against the new Chiron Pur Sport (pronounced pure sport), well folks, that's a pretty good email. Yes, I spent a day driving two cars that between them have 3,000 hp, 32 cylinders, eight turbochargers, 128 valves, 20 radiators, and cost north of $7,800,000. That's $3,757,150 for the exposed blue carbon-fiber Chiron Sport and $3,959,000 for the Jet Grey Pur Sport, so you know. We'll get to the difference between them in good time, but first I'd like to tell you a little story about the first time I drove a Bugatti.",
+    "images": [
+      "https://cdn.motor1.com/images/mgl/pbxogg/s1/post-malone-s-2019-bugatti-chiron.webp",
+      "https://cdn.motor1.com/images/mgl/P3GxN2/s3/post-malone-s-2019-bugatti-chiron.webp",
+      "https://robbreport.com/wp-content/uploads/2022/03/postmalonechiron01.jpg?w=1000",
+      "https://i0.wp.com/2p2bboli8d61fqhjiqzb8p1a-wpengine.netdna-ssl.com/wp-content/uploads/2022/03/post-malone-bugatti-5-scaled.jpg?ssl=1",
+      "https://www.thedrive.com/content-b/message-editor%2F1646324901752-post-malone-bugatti-11-scaled.jpeg?",
+      "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AAUwStX.img?h=552&w=750&m=6&q=60&u=t&o=f&l=f",
+      "https://cdn.motor1.com/images/mgl/E61Bq3/s3/post-malone-s-2019-bugatti-chiron-interior.webp"
+    ]
+  },
+  {
+    "modelId": 335,
+    "color": "blue",
+    "price": 29000,
+    "description": "I have driven all three modern-era Bugattis—the Chiron, the Veyron, and the EB110. The Chiron and Veyron were the result of VW Group boss Ferdinand Pich's steely determination to build the fastest, most powerful supercars in history. The EB110, of which just 139 were built between 1991 and 1995, was a more quixotic proposition.",
+    "images": [
+      "https://tcct.com/wp-content/uploads/2020/05/1993-Bugatti-EB110-GT-Bonhams.jpg",
+      "https://s.yimg.com/os/en-US/cms/autos/Boldride/eb1103.jpg",
+      "https://cimg0.ibsrv.net/ibimg/hgm/1830x1029-1/100/798/1994-bugatti-eb-110-gt-prototype-photo-via-dupont-registry_100798076.jpg",
+      "http://cdn.carbuzz.com/gallery-images/840x560/86000/900/86904.jpg"
+    ]
+  },
+  {
+    "modelId": 333,
+    "color": "black",
+    "price": 19000,
+    "description": "We have Ferdinand Piëch to thank for the Bugatti Veyron. Appointed Volkswagen CEO in 1993, Piëch, was responsible for Volkswagen's acquisition of Bentley, Lamborghini, and Ducati, as well as the rebirth of Bugatti. The Veyron was part of Piëch's mission for Volkswagen to become a world leader, and doing so with such an outrageous vehicle proved largely successful.The idea of a 1,000-hp, million-dollar car was even more ludicrous in the early 2000s as it is today, and the Veyron developed into a car of legend. As an example of opulent excess and engineering wizardry, it elevated beyond the automotive space to become something of a cultural icon. The Veyron's successor, Bugatti's modern Chiron, surpasses its older sibling in nearly every objective measure, but it will never seem quite as special as the house that Piëch built.",
+    "images": [
+      "https://s1.cdn.autoevolution.com/images/news/very-last-bugatti-veyron-super-sport-ever-made-is-a-1184-hp-matte-black-stunner-162519_1.jpg",
+      "https://cdn.hiconsumption.com/wp-content/uploads/2021/05/2014-Bugatti-Veyron-Super-Sport-0-Hero.jpg",
+      "https://www.carscoops.com/wp-content/uploads/2021/06/Bugatti-Veyron-Super-Sport-7.jpg",
+      "https://pbs.twimg.com/media/CHSl7f4W8AAKThW.jpg"
+    ]
+  },
+  {
+    "modelId": 28,
+    "color": "grey",
+    "price": 4000,
+    "description": "If a car in Rolls-Royce's lineup must be called entry-level, it's the Ghost. This sedan may be the brand's least-expensive vehicle, but it's still more opulent than any mainstream luxury car. Like all other 2021 Rolls-Royce models the Ghost has V-12 power and myriad potential for bespoke personalization. For those who would prefer to be driven than drive themselves, the Ghost Extended adds rear-seat legroom and is well suited for chauffeur duty. The current second-generation Ghost was fully redesigned for the 2021 model year.",
+    "images": [
+      "https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1600419976/autoexpress/2020/09/New%20Rolls-Royce%20Ghost%202020-19.jpg",
+      "https://images.pistonheads.com/nimg/43099/5f64a601e78fe.jpg"
+    ]
+  },
+  {
+    "modelId": 361,
+    "color": "blue",
+    "price": 6500,
+    "description": "STO stands for Super Trofeo Omologato, and yeah, it's a bit close to Ferrari's vaunted GTO moniker, but that's okay. The STO is intended to be a road-legal track car that offers the feel and much of the technology of the Super Trofeo racer. Put more simply, if the Performante is Lambo's Porsche 911 GT3 or McLaren 600LT, the STO is its GT3 RS or 620R. It's an extreme vehicle. The STO will offer roughly equivalent straight-line performance to the Huracán EVO AWD and Performante models but deliver the aerodynamics and lap times of the Super Trofeo racers. Plus it has better brakes.",
+    "images": [
+      "https://media.ed.edmunds-media.com/lamborghini/huracan/2021/ns/2021_lamborghini_huracan_actf34_ns_1252201_1600.jpg",
+      "https://www.motortrend.com/uploads/2022/01/2021-Lamborghini-Huracan-STO-68.jpg",
+      "https://www.motortrend.com/uploads/2022/01/2021-Lamborghini-Huracan-STO-75.jpg",
+      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dwburnett-pcoty-9899-jpg-1641832704.jpg",
+      "https://cdn.carbuzz.com/gallery-images/2021-lamborghini-huracan-sto-front-seats-carbuzz-777263.jpg",
+      "https://cdn.carbuzz.com/gallery-images/2021-lamborghini-huracan-sto-dashboard-carbuzz-777276.jpg"
+    ]
+  },
+  {
+    "modelId": 359,
+    "color": "green",
+    "price": 4250,
+    "description": "Lambos have V-10s and V-12s, right? Not this one. Neither would have fit into the Urus's Audi-developed Volkswagen Group MLBevo platform but there was another engine under the Volkswagen umbrella that would—the 4.0-liter twin-turbo V-8 from the Porsche Cayenne Turbo. That's not to say this is just a repurposed Porsche engine. Lamborghini shipped it to Porsche Motorsports (you're likely familiar with their 911 GT3, GT2 RS, and Speedster, among others), which modified and massaged it to crank out 641 hp and 627 lb-ft of torque—numbers our Christian Seabaugh called almost certainly underrated.",
+    "images": [
+      "https://www.cnet.com/a/img/resize/b8b781970faf69da6f7e041d45bffefa80142d2e/hub/2021/06/21/fb10dce9-d7d7-4f6f-a5f5-9e4240de9af4/2021-lamborghini-urus-112.jpg?auto=webp&width=1920",
+      "https://imageio.forbes.com/specials-images/imageserve/60c90bf1a0c21d4e31d7192b/2021-Lamborghini-Urus-Pearl-Capsule/960x0.jpg?fit=bounds&format=jpg&width=960"
+    ]
+  },
+  {
+    "modelId": 357,
+    "color": "purple",
+    "price": 8250,
+    "description": "The Lamborghini Aventador comes with a 6.5-liter V-12 mated to a seven-speed single-clutch automated manual transmission. In the Aventador S, the engine makes 730 hp and 509 lb-ft of torque. The potent Aventador SVJ, on the other hand, ups the ante to 760 hp and 531 lb-ft. Regardless of which variant you get, the Lamborghini Aventador is EPA-rated at 9/15 mpg city/highway.",
+    "images": [
+      "https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1563182809/autoexpress/2019/04/01_46.jpg",
+      "https://www.autocar.co.uk/sites/autocar.co.uk/files/37-lamborghini-aventador-svj-2019-rt-static-rear.jpg",
+      "https://images.pistonheads.com/nimg/39645/AventadorSVJ_09.jpg",
+      "https://media.autoexpress.co.uk/image/private/s--Oq6nH0G_--/f_auto,t_content-image-full-desktop@1/v1563183040/autoexpress/2019/04/02_46.jpg",
+      "https://media.autoexpress.co.uk/image/private/s--9qobiUrS--/f_auto,t_content-image-full-desktop@1/v1563183079/autoexpress/2019/04/04_44.jpg",
+      "https://media.autoexpress.co.uk/image/private/s--7pcgtYxn--/f_auto,t_content-image-full-desktop@1/v1563183117/autoexpress/2019/04/06_45.jpg",
+      "https://media.autoexpress.co.uk/image/private/s--3x_Nej6P--/f_auto,t_content-image-full-desktop@1/v1563183195/autoexpress/2019/04/10_37.jpg",
+      "https://media.autoexpress.co.uk/image/private/s--9eJuIwrt--/f_auto,t_content-image-full-desktop@1/v1563183250/autoexpress/2019/04/13_28.jpg"
+    ]
+  },
+  {
+    "modelId": 355,
+    "color": "red",
+    "price": 7240,
+    "description": "Talk about big shoes to fill. As the Lamborghini Countach entered its twilight years in the late 1980s, the company had the onerous task of designing a car that exceeded the visual, aural, and dynamic sucker-punch provided by its iconic neck-snapping V-12 super-wedge. The new Lambo had to vaporize eyebrows and buckle knees at a thousand feet if it was to be labeled as anything other than a letdown.",
+    "images": [
+      "https://www.carscoops.com/wp-content/uploads/2021/08/Lamborghinmi-Diablo-SV-7.jpg",
+      "https://bringatrailer.com/wp-content/uploads/2021/06/1998_lamborghini_diablo_sv_1628532773b276f7ebd598f3c19diablo-sv-psngr-sd2.jpg?fit=940%2C626",
+      "https://cdn1.mecum.com/auctions/ca0818/ca0818-336726/images/1-1532527008897@2x.jpg?1535141921000",
+      "https://www.historics.co.uk/media/1583495/1995-lamborghini-diablo-1.jpg?anchor=center&mode=crop&width=1000"
+    ]
+  },
+  {
+    "modelId": 354,
+    "color": "yellow",
+    "price": 7100,
+    "description": "Feast your eyes on easily one of the most striking and contemporary exotic sports cars on the market today, Lamborghini's sizzling Gallardo. With a mid-mounted, twin-cam 5.2-liter V-10 making 552 horsepower and feeding a full-time all-wheel drive system, the Gallardo lays down a sensational combination of effortless speed and confidence-inspiring stability.If you prefer a little more friskiness with your power delivery, the limited-edition Valentino Balboni edition (named in honor of Lambo's legendary test driver) is rear-drive only -- happy to kick-out its tail when commanded by your right foot.",
+    "images": [
+      "https://cdn.carbuzz.com/gallery-images/840x560/696000/900/696995.jpg,",
+      "https://cdn.carbuzz.com/gallery-images/840x560/696000/900/696996.jpg"
+    ]
+  },
+  {
+    "modelId": 353,
+    "color": "Orange",
+    "price": 6340,
+    "description": "We will admit to occasionally blurring the line between what constitutes a genuine supercar and what may or may not be a more run-of-the-mill sportscar, but when it comes to the Lexus LFA there are no two ways about it—it's definitely super. You can argue the FR coupe may not have the sheer bench racing numbers to put it in amongst Lambo, Ferrari, McLaren and others, but everything else about the LFA screams high end and unique. Now, one of the limited-edition V-10 Lexus produced in the early 2010s is crossing the auction block this fall in Arizona and can be yours, provided your pockets are proportionally super deep.",
+    "images": [
+      "https://static.wikia.nocookie.net/gran-turismo/images/d/df/Lamborghini_Murcielago_LP670-4_SuperVeloce_%2709.jpg/revision/latest?cb=20190130142934",
+      "https://www.lambocars.com/wp-content/uploads/2013/01/DM2322-vkqmapst.jpg",
+      "https://www.dealermanager.co.uk/images/201511/large/DM2322-joqmvxqm.jpg",
+      "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/03821582-6928-426a-b2fc-3e098129c8cb/d8it9tr-8869ec86-90aa-4f3a-bd6e-03f5746a3512.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzAzODIxNTgyLTY5MjgtNDI2YS1iMmZjLTNlMDk4MTI5YzhjYlwvZDhpdDl0ci04ODY5ZWM4Ni05MGFhLTRmM2EtYmQ2ZS0wM2Y1NzQ2YTM1MTIuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rKKr8YBAP_OwkD7UmJeLuy8ABMfNyx_DZOGIXQIqWs8"
+    ]
+  },
+  {
+    "modelId": 362,
+    "color": "Orange",
+    "price": 4300,
+    "description": "We will admit to occasionally blurring the line between what constitutes a genuine supercar and what may or may not be a more run-of-the-mill sportscar, but when it comes to the Lexus LFA there are no two ways about it—it's definitely super. You can argue the FR coupe may not have the sheer bench racing numbers to put it in amongst Lambo, Ferrari, McLaren and others, but everything else about the LFA screams high end and unique.Now, one of the limited-edition V-10 Lexus produced in the early 2010s is crossing the auction block this fall in Arizona and can be yours, provided your pockets are proportionally super deep.",
+    "images": [
+      "https://www.motortrend.com/uploads/sites/5/2019/07/2012-Lexus-LFA-10-1.jpg?fit=around%7C875:492",
+      "https://lexusenthusiast.com/images/weblog/12-03-15-lexus-lfa-sunset-orange-face.jpg"
+    ]
+  },
+  {
+    "modelId": 400,
+    "color": "white",
+    "price": 4000,
+    "description": "This will be the first in a wave of RS-badged SUVs from Audi. Although we don't know what will be under the sheetmetal, it's possible the RS Q8 will inherit a version of the 4.0-liter twin-turbo V-8 found in the Lamborghini Urus, where it makes 641 hp.While saying nothing is official at this stage, the report from Autocar claims Audi Sport is said to be developing RS versions of the following vehicles: Q3, Q5, Q7, and Q8. We're certainly not surprised about RS Q3, considering we've seen prototypes hard at work on the track for what could be a 400-hp small SUV. Autocar says to expect RS-badged SUVs within the next 12 months.",
+    "images": [
+      "https://pictures.topspeed.com/IMG/crop/202111/abt-audi-rsq8-s-15_1600x0w.jpg",
+      "https://www.abt-sportsline.com/fileadmin/_processed_/d/6/csm_ABT_RSQ8-S_grey_HR23_2_b7d11102df.jpg",
+      "https://www.abt-sportsline.com/fileadmin/_processed_/2/7/csm_ABT_RSQ8-S_grey_HR23_3_488116f1ef.jpg",
+      "https://www.abt-sportsline.de/fileadmin/abt-sportsline/Modelle/Limited_Editions/RSQ8-S/Wallpaper_RSQ8-S_3-4-Front.jpg",
+      "https://cdn.carbuzz.com/gallery-images/2021-audi-rs-q8-dashboard-carbuzz-894275-1600.jpg"
+    ]
+  },
+  {
+    "modelId": 377,
+    "color": "grey",
+    "price": 3950,
+    "description": "The R8 is Audi's iconic mid-engine supercar. With a V-10 engine mounted behind the driver, the R8 represents the pinnacle of Audi's performance and styling capabilities. Despite its track-ready capabilities, it's also comfortable enough for everyday cruising. The first-generation R8 debuted in 2006 and positioned Audi as a legitimate contender in the supercar realm. Now in its second generation, the R8 was significantly updated for 2020.",
+    "images": [
+      "https://cdn.motor1.com/images/mgl/JmVR6/s1/4x3/2019-audi-r8-onlocation.webp",
+      "https://audimediacenter-a.akamaihd.net/system/production/media/70272/images/3c92d2acbf6ab5f85be8006f854786f0f0ff36be/A1813681_x500.jpg?1582468430",
+      "https://www.teahub.io/photos/full/19-194412_audi-r8-wallpaper-2019.jpg",
+      "https://images.caricos.com/a/audi/2019_audi_r8/images/2560x1440/2019_audi_r8_43_2560x1440.jpg",
+      "https://www.carmag.co.za/wp-content/uploads/2018/11/WR_7606-800x480.jpg",
+      "https://autodius.com/wp-content/uploads/2020/07/2020-audi-r8-v10-interior-pictures.jpg"
+    ]
+  },
+  {
+    "modelId": 420,
+    "color": "black",
+    "price": 4764,
+    "description": "The 911 is one of the longest-running nameplates in the automotive industry. As of 2022, Porsche has been selling 911s for 58 years, and the latest iteration lives up to the hype. The Carrera S even took home our 2019 Best Driver's Car award.This year marks the return of two variants, the goldilocks GTS and the race-inspired atmospheric GT3, plus some notable infotainment updates. Porsche's icon competes with other premium sports cars including the Mercedes-Benz AMG GT, Aston Martin Vantage, and Chevrolet Corvette.",
+    "images": [
+      "https://robbreport.com/wp-content/uploads/2020/11/911gt301.jpg?w=1000",
+      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/porsche-911-gt3-prototype-101-1606311791.jpg?crop=0.603xw:0.452xh;0.141xw,0.397xh&resize=1200:*",
+      "https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/97-porsche-911-gt3-2021-passenger-ride-hero-rear.jpg",
+      "https://assets.whichcar.com.au/image/upload/s--7J02oxn9--/c_fill,f_auto,q_auto:good/f_auto/v1/archive/whichcar/2020/11/26/Misc/2021-Porsche-911-GT3-rear-three.jpg"
+    ]
+  },
+  {
+    "modelId": 425,
+    "color": "grey",
+    "price": 19500,
+    "description": "The 2015 Porsche 918 Spyder provides excellent performance, delivering outstanding acceleration and impressive driving dynamics thanks to its track-ready chassis and suspension. An available $84,000 Weissach Package improves performance by making the car 77 pounds lighter with carbon fiber parts on certain components such as the roof, rear spoiler, windshield surround, mirror caps, and rear anti-roll bars. The car's paint is also replaced with a foil wrap, and adds ceramic wheel bearings, titanium brake pads, and backing plates. Inside, the standard upholstery is swapped with non-flammable cloth, has less carpeting, and deletes the glove box. Two paint Liquid Metal exterior schemes in silver or blue shade are also available for $63,000.Despite its performance-minded tuning, the 918 Spyder is a pleasant road car with good ride quality and a well-appointed cabin without the Weissach Package. However, since comfort isn't its primary mission, the car's seats are upright and don't have many adjustments while the steering wheel only telescopes.",
+    "images": [
+      "https://robbreport.com/wp-content/uploads/2021/07/1-15.jpg?w=1000",
+      "https://robbreport.com/wp-content/uploads/2021/07/5-17.jpg",
+      "https://cdn.sportscardigest.com/wp-content/uploads/20210825113318/DSC7486.jpg",
+      "https://cdn.sportscardigest.com/wp-content/uploads/20210825113304/DSC7466.jpg",
+      "https://cdn.carbuzz.com/gallery-images/2015-porsche-918-spyder-dashboard-carbuzz-401664-1600.jpg"
+    ]
+  },
+  {
+    "modelId": 486,
+    "color": "yellow",
+    "price": 5600,
+    "description": "Under the sheetmetal, the Ferrari F12 TDF has the same naturally aspirated 6.3-liter V-12 engine as the standard F12 Berlinetta, but has been tuned to produce 770 hp and 520 lb-ft of torque. It has also shed 243 pounds thanks to the abundant use of carbon fiber and redesigned bodywork. Because of the modifications, the F12 TDF hits 62 mph in just 2.9 seconds, according to Ferrari. That's quicker than the (gasp) 488 GTB, which Ferrari says can hit 62 mph in 3 seconds flat. Of course, it's also quicker than the standard F12 Berlinetta listed at 3.1 seconds to 62 (or 3.6 seconds to 60 mph in our tests.)",
+    "images": [
+      "https://cdn.motor1.com/images/mgl/3xWP1/s1/2016-ferrari-f12tdf-mecum-auction.jpg",
+      "https://cdn1.mecum.com/auctions/ca0817/ca0817-300275/images/ca0817-300275_2@2x.jpg?1501600299000",
+      "https://www.77motors.com/cars/wp-content/uploads/thememakers/cardealer/9/1230/main/5c3f5963eb7f4.png",
+      "https://pictures.topspeed.com/IMG/crop/201708/2017-ferrari-f12tdf-22_800x0w.jpg"
+    ]
+  },
+  {
+    "modelId": 452,
+    "color": "red",
+    "price": 21500,
+    "description": "Depending on who you ask, the mighty Ferrari Enzo was Ferrari's first real hypercar—fitting, for a car that carries the weight of its founder's given name. As part of the exclusive pantheon of five halo Ferraris that include the 288 GTO, F40, F50, and later LaFerrari, the Enzo was the highly successful follow-up to the rather unsuccessful F50. For the F50, this success is not measured in monetary values—considering the 349-unit run of the F50 sold out as intended—but the F50 failed to capture the collective imagination with the same voracity as the preceding F40 did, especially under the looming shadow of the contemporary McLaren F1.",
+    "images": [
+      "https://cdn.motor1.com/images/mgl/Bowxe/s1/enzo-ferrari-driven-by-michael-schumacher-for-sale.jpg",
+      "https://www.carscoops.com/wp-content/uploads/2020/03/Ferrari-Enzo-For-Sale-.jpg",
+      "https://www.carscoops.com/wp-content/uploads/2020/03/Ferrari-Enzo-For-Sale-2.jpg",
+      "https://live.staticflickr.com/7270/7001216534_d0d6b08db6_b.jpg"
+    ]
+  },
+  {
+    "modelId": 452,
+    "color": "yellow",
+    "price": 21300,
+    "description": "The Ferrari LaFerrari provides impeccable performance with light but precise steering, and a responsive chassis. The high-revving V-12, which is a retuned version of the unit found on the F12berlinetta, gives the LaFerrari exceptional acceleration when combined with the electric motor and the quick-shifting dual-clutch transmission. Since this is a performance application of a hybrid powertrain, the LaFerrari doesn't have an electric-only mode and is focused on making the car faster instead of saving fuel. The car's adjustable magnetic suspension enables drivers to choose between different settings including a bumpy road option that improves the LaFerrari's cruising experience.",
+    "images": [
+      "https://robbreport.com/wp-content/uploads/2020/03/2017-ferrari-laferrari-aperta_ryan-merrill-2020-courtesy-of-rm-sothebys-2-1.jpg",
+      "https://www.carscoops.com/wp-content/uploads/2017/02/yellow2015_Ferrari_LaFerrari_0010-copy.jpg",
+      "https://live.staticflickr.com/5151/14317428412_383fdf9e76_b.jpg",
+      "https://cdn1.mecum.com/auctions/ca0818/ca0818-336607/images/16-1530799170389@2x.jpg?1535232252000",
+      "https://cdn1.mecum.com/auctions/ca0818/ca0818-336607/images/3-1530799143272@2x.jpg?1535232252000",
+      "https://i.pinimg.com/originals/59/71/70/5971707933f382932fafe6e3be3cff03.jpg",
+      "http://robbreport.com/wp-content/uploads/2017/08/131.jpg"
+    ]
+  },
+  {
+    "modelId": 491,
+    "color": "red",
+    "price": 8430,
+    "description": "The 488 Pista and Pista Spider are Ferrari's special edition hyper-focused farewells to the 488. The 488 was Ferrari's first turbocharged mid-engine supercar and its follow-up to the screaming atmospheric 458 Italia. You can think of the Pista as the 458 Speciale or the 430 Scuderia of the 488 range. With the arrival of the brilliant F8 Tributo, 2020 will be the final model year of the 488. The Pista competes with other track-focused supercars, including the Porsche 911 GT2 RS, Lamborghini Huracan Performante, and McLaren 600LT.",
+    "images": [
+      "https://cdn.motor1.com/images/mgl/vyjQb/s1/ferrari-488-pista-prova-sul-circuito-di-fiorano.webp",
+      "https://www.driving.co.uk/wp-content/uploads/sites/5/2019/07/2018-Ferrari-488-Pista-Clarkson-Review-01.jpg",
+      "https://www.miamilusso.com/wp-content/uploads/2018/04/pista-1-1024x576.jpg",
+      "https://www.carbodydesign.com/media/2018/02/Ferrari-488-Pista-Interior-01.jpg"
+    ]
+  },
+  {
+    "modelId": 489,
+    "color": "grey",
+    "price": 8320,
+    "description": "The 812 Superfast continues a long Ferrari tradition of front-engine V-12 performance machines. It replaced the F12 Berlinetta, and it retained that car's formula of a naturally aspirated V-12 up front, a quick-shifting dual-clutch automatic, and rear-wheel drive. Few experiences can compete with the thrill of driving a V-12 Ferrari, but customers may find themselves considering cars like the Lamborghini Aventador, Aston Martin DBS Superleggera, and Bentley Continental GT.",
+    "images": [
+      "https://hips.hearstapps.com/amv-prod-gp.s3.amazonaws.com/gearpatrol/wp-content/uploads/2019/10/Ferrari-812-Superfast-Review-gear-patrol-slide-1.jpg",
+      "https://www.cnet.com/a/img/resize/2a3a10b2cde4f88376519246e89ccb9f744a2143/hub/2019/12/20/c7be4b82-0571-4b9d-a864-1d6384b7e333/2019-ferrari-812-superfast-30.jpg?auto=webp&width=1092",
+      "https://www.cnet.com/a/img/resize/fd125565438cb27b058fa0b82580dcc2009d2707/hub/2019/12/22/0710efab-054f-448f-8ea1-da9903fba57a/superfast-promo.jpg?auto=webp&width=768",
+      "https://cdn.carbuzz.com/gallery-images/2021-ferrari-812-superfast-dashboard-carbuzz-361142-1600.jpg"
+    ]
+  },
+  {
+    "modelId": 500,
+    "color": "grey",
+    "price": 14000,
+    "description": "In the company of other hypercars, the Koenigsegg One:1 is king. With a sweat-inducing 1,341 hp and 1,011 lb-ft of torque, the 2,998-pound road-going land speed record car sports an absurd one megawatt of energy per kilogram. With all of this firepower, you'd best believe the One:1 has the gumption to crack its estimated top speed of 273.4 mph.To put this obscene performance capability to the test, Koenigsegg brought the One:1 out to their test track to see if the powerhouse has the performance to crack their old 0 mph-to-186 mph-to-0 record, set by a 1,124 hp Koenigsegg Agera R. The previous record stood at a blinding 21.19 seconds.",
+    "images": [
+      "https://s1.cdn.autoevolution.com/images/gallery/KOENIGSEGG-Agera-One-1-5459_12.jpg",
+      "http://greatexpensiveitems.weebly.com/uploads/6/0/6/1/60618265/4570152_orig.jpg",
+      "https://live.staticflickr.com/3511/13007610705_8fcea09dae_b.jpg"
+    ]
+  },
+  {
+    "modelId": 501,
+    "color": "exposed carbon",
+    "price": 18400,
+    "description": "As we pass yet another policeman hiding in the bushes, the cab driver cheerfully tells us a 6-mph over-the-limit indiscretion here will cost the thick end of $700. What we're planning would surely send us to jail and make the news. With just one major road and apparently a stakeout every five minutes, this part of Norway might not be the best place to drive one of the fastest cars in the world.But here we are in scenic, fjord-filled Fredrikstad, just an hour south of Oslo, to drive the Koenigsegg Agera R. This machine is perhaps the only real rival to the Bugatti Veyron and Pagani Huayra. It's a car that belongs at the top rung of the supercar world. It is also made for breaking 200 mph, which could put us in jail for a very long time. It costs $3 million, is the only one of its kind, and it's raining. No pressure, then...",
+    "images": [
+      "https://s1.cdn.autoevolution.com/images/news/the-one-off-2018-koenigsegg-agera-rs-phoenix-is-back-on-the-market-159093_1.jpg",
+      "https://www.motorbiscuit.com/wp-content/uploads/2021/04/aaf17f96e3a515a35da6229d3285eff8x.jpeg",
+      "https://www.motorbiscuit.com/wp-content/uploads/2021/04/0a3d3f15f1c10dd04afe0135bb9de5c1x.jpeg",
+      "https://www.carscoops.com/wp-content/uploads/2021/04/Koenigsegg-Agera-RS-5.jpg",
+      "https://i.ytimg.com/vi/c_7B9pbauzo/maxresdefault.jpg"
+    ]
+  },
+  {
+    "modelId": 502,
+    "color": "exposed green carbon",
+    "price": 21300,
+    "description": "Every automaker that’s worth its name has a quality control procedure that needs to be followed before its products head to their respective owners. For some, these quality control procedures involve checking the engine, the interior, and the car’s electronics system. But for an automaker like Koenigsegg, quality control procedures take on different forms.",
+    "images": [
+      "https://www.thesupercarblog.com/wp-content/uploads/2018/07/Koenigsegg-Regera-Malin-Green-Carbon.jpg",
+      "https://i.pinimg.com/originals/01/e1/e0/01e1e01134c12882e6df99f7cd5862ac.jpg",
+      "https://live.staticflickr.com/932/43463602792_3bef77f981_b.jpg"
+    ]
+  },
+  {
+    "modelId": 504,
+    "color": "orange",
+    "price": 23030,
+    "description": "In fact, this is the best time for McLaren to extend its range of road cars and take advantage of its heritage as the second most successful Formula 1 team after Ferrari. McLaren has design and engineering clout and provenance that Pagani and Konigsegg can't match.",
+    "images": [
+      "https://www.classicdriver.com/sites/default/files/cars_images/feed_681175/mclaren-p1-033.jpg",
+      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/p1-1564067704.jpg?crop=0.908xw:0.605xh;0.0357xw,0.395xh&resize=640:*",
+      "https://cdn.motor1.com/images/mgl/BJByA/s1/mclaren-p1-experimental-prototype.jpg",
+      "https://cdn.carbuzz.com/gallery-images/2015-mclaren-p1-dashboard-carbuzz-395650.jpg"
+    ]
+  },
+  {
+    "modelId": 513,
+    "color": "blue grey",
+    "price": 15600,
+    "description": "Named after the famed racing driver Ayrton Senna who ruled the racetracks during the mid-eighties to early nineties, the McLaren Senna aims to rewrite the history books with sheer levels of performance and capability and is one of the purest driving cars the English manufacturer has ever put into production. McLaren claims that the Senna is the most track-focused car they've ever produced. What this means is a ton of race-inspired engineering has gone into this car, and the numbers do most of the talking: with a curb weight of only 2,897 pounds, the Senna is the lightest vehicle McLaren has built since the legendary F1. Based on the McLaren 720S, it packs a twin-turbo 4.0-liter V8 developing 789 horsepower and 590 lb-ft of torque. At speed, the Senna creates close to a ton of downforce and will reach a top speed of 208 mph. This then is no speed-chasing hypercar, but a true track weapon with the go to match, and rivals the likes of the Ford GT.",
+    "images": [
+      "https://cdn.carbuzz.com/gallery-images/1600/706000/700/706781.jpg",
+      "https://cdn.carbuzz.com/gallery-images/1600/435000/400/435435.jpg",
+      "https://cdn.carbuzz.com/gallery-images/1600/435000/400/435428.jpg",
+      "https://cdn.carbuzz.com/gallery-images/1600/435000/400/435449.jpg",
+      "https://cdn.carbuzz.com/gallery-images/1600/435000/400/435439.jpg",
+      "https://cdn.carbuzz.com/gallery-images/1600/435000/400/435445.jpg",
+      "https://cdn.carbuzz.com/gallery-images/1600/435000/300/435395.jpg",
+      "https://cdn.carbuzz.com/gallery-images/1600/435000/400/435403.jpg",
+      "https://cdn.carbuzz.com/gallery-images/1600/435000/400/435405.jpg",
+      "https://cdn.carbuzz.com/gallery-images/1600/435000/300/435389.jpg",
+      "https://cdn.carbuzz.com/gallery-images/1600/435000/300/435390.jpg"
+    ]
+  },
+  {
+    "modelId": 514,
+    "color": "blue white",
+    "price": 18450,
+    "description": "Occasionally somebody comes up with a simple line about a new car that delivers a devastatingly effective message. McLaren has nailed it with the new track-only Senna GTR, simply saying it delivers the fastest McLaren lap times outside of Formula 1. Faster than your regular Senna, of course. Faster than a pure racer like the 720S GT3. The GTR is a car designed without consideration of restrictive FIA regulations. McLaren could throw as many wings, flics, and active aerodynamic devices at the shape as it saw fit to add.",
+    "images": [
+      "https://www.motortrend.com/uploads/sites/11/2020/01/McLaren-Senna-GTR-34.jpg?fit=around%7C770:481.25",
+      "https://www.motortrend.com/uploads/sites/11/2020/01/McLaren-Senna-GTR-40.jpg?interpolation=lanczos-none&fit=around|660:371?fit=around%7C770:481.25",
+      "https://www.motortrend.com/uploads/sites/11/2020/01/McLaren-Senna-GTR-22.jpg?interpolation=lanczos-none&fit=around|660:371?fit=around%7C770:481.25",
+      "https://www.motortrend.com/uploads/sites/11/2020/01/McLaren-Senna-GTR-16.jpg?interpolation=lanczos-none&fit=around|660:371?fit=around%7C770:481.25",
+      "https://www.motortrend.com/uploads/sites/11/2020/01/McLaren-Senna-GTR-33.jpg?interpolation=lanczos-none&fit=around|660:371?fit=around%7C770:481.25",
+      "https://www.motortrend.com/uploads/sites/11/2020/01/McLaren-Senna-GTR-31.jpg?fit=around%7C770:481.25"
+    ]
+  },
+  {
+    "modelId": 519,
+    "color": "red",
+    "price": 3100,
+    "description": "Discussing supercars made in the early 2000s will probably leave the Saleen S7 out, which is understandable since outside the US it is nowhere near as well-known Ferrari or a Lamborghini.The upside is that this very fact can make it appealing to those on the lookout for a rare exotic and might be interested in one of the final Saleen S7s built that is up for grabs. Manufactured in 2006, this example had two previous owners, who kept it under close watch rather than taking the occasional ride or (God forbid) unleash her on the drag strip – which is why its odometer indicates just 300 miles (483 km)!",
+    "images": [
+      "https://www.carscoops.com/wp-content/uploads/2016/07/310341c3-2006-saleen-s7-1.jpg",
+      "https://www.carscoops.com/wp-content/uploads/2016/07/870bb836-2006-saleen-s7-2.jpg",
+      "https://www.carscoops.com/wp-content/uploads/2016/07/8f7f8cf5-2006-saleen-s7-3.jpg",
+      "https://www.carscoops.com/wp-content/uploads/2016/07/aefa01b8-2006-saleen-s7-4.jpg",
+      "https://www.carscoops.com/wp-content/uploads/2016/07/686da7c4-2006-saleen-s7-5.jpg",
+      "https://www.carscoops.com/wp-content/uploads/2016/07/158881c9-2006-saleen-s7-10.jpg",
+      "https://www.carscoops.com/wp-content/uploads/2016/07/72c869b8-2006-saleen-s7-11.jpg",
+      "https://www.carscoops.com/wp-content/uploads/2016/07/5d1f22ac-2006-saleen-s7-12.jpg"
+    ]
+  },
+  {
+    "modelId": 520,
+    "color": "grey",
+    "price": 18450,
+    "description": "This or the Pur Sport? I'd brought the latest and greatest from Italy's smallest and most prestigious hypercar maker, Pagani, to a weekly gathering of Los Angeles-based car freaks. I'd just finished explaining that yes, the Pagani Huayra Roadster BC—a fully hand-built, AMG-powered carbon-fiber spacecraft—costs about $4 million as tested.",
+    "images": [
+      "https://www.motortrend.com/uploads/2021/09/Pagani-Huayra-BC-Roadster-02-1.jpg?fit=around%7C770:481.25",
+      "https://www.motortrend.com/uploads/2021/09/Pagani-Huayra-BC-Roadster-09-1.jpg?fit=around%7C770:481.25",
+      "https://www.motortrend.com/uploads/2021/09/Pagani-Huayra-BC-Roadster-14-1.jpg?fit=around%7C770:481.25",
+      "https://www.motortrend.com/uploads/2021/09/Pagani-Huayra-BC-Roadster-53-1.jpg?fit=around%7C770:481.25",
+      "https://www.motortrend.com/uploads/2021/09/Pagani-Huayra-BC-Roadster-52-1.jpg?fit=around%7C770:481.25",
+      "https://www.motortrend.com/uploads/2021/09/Pagani-Huayra-BC-Roadster-55-1.jpg?fit=around%7C770:481.25",
+      "https://www.motortrend.com/uploads/2021/09/Pagani-Huayra-BC-Roadster-33-1.jpg?fit=around%7C770:481.25"
+    ]
+  }
+]
