@@ -75,3 +75,8 @@
 .nonfuction:hover {
   background-color: transparent;
 }
+
+.rightnavbartext {
+  display: flex;
+  align-items: center;
+}

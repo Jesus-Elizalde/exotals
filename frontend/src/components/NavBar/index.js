@@ -4,10 +4,14 @@ import { ReactComponent as ProflieIcon } from "../../svg/prfile.svg";
 import { ReactComponent as Logo } from "../../svg/logo.svg";
 
 import NavItem from "./NavItem";
+import SearchBar from "../SearchBar.js";
 
 import "./NavBar.css";
+import { useSelector } from "react-redux";
 
 export default function NavBar({ isLoaded }) {
+  const data = useSelector((state) => state.cars.cars);
+  const dataArr = Object.values(data);
   return (
     <nav className="navbar">
       <ul className="navbar-nav">
@@ -18,8 +22,11 @@ export default function NavBar({ isLoaded }) {
                 {<Logo />}
               </a>
             </li>
-            <div style={{ display: "flex", alignItem: "center" }}>
+
+            <div className="rightnavbartext">
+              <SearchBar placeholder="Enter a Car...." data={dataArr} />
               <a href="/home">Home</a>
+              <a>My Favorites</a>
               <NavItem icon={<ProflieIcon />} isLoaded={isLoaded} />
             </div>
           </>
