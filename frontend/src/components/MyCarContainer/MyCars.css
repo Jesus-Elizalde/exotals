@@ -106,3 +106,13 @@ button:hover {
   color: red;
   font-weight: bold;
 }
+
+.editbuttonmycar {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.editbuttons {
+  margin-left: 10px;
+  margin-right: 10px;
+}

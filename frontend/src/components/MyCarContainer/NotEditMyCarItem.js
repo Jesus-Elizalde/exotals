@@ -23,7 +23,7 @@ function NotEditMyCarItem({ data, edit }) {
 
   return (
     <div className="mycar-item">
-      <div>
+      <div className="editbuttonmycar">
         <button onClick={() => edit(true)}>edit</button>
       </div>
       <div className="mycar-item-container">

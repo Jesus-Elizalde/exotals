@@ -18,16 +18,20 @@ function DetailContainer() {
   const cars = useSelector((state) => state.cars.cars);
   const makes = useSelector((state) => state.makes.makes);
   const user = useSelector((state) => state.session.user);
+  const reviews = useSelector((state) => state.reviews);
   const carId = pathname.split("/").at(-1);
   const singleCar = cars[carId];
 
-  const dispatch = useDispatch();
+  const currreviews = Object.values(reviews)?.filter(
+    (ele) => ele?.carId === +carId
+  );
+
+  let avgRating = 0;
+
+  currreviews.forEach((ele) => (avgRating += ele.rating));
+  avgRating = parseFloat(avgRating / currreviews.length).toFixed(2);
 
   const [showModel, setShowModal] = useState(false);
-
-  const addToFav = () => {
-    dispatch(addOneFav({ userId: 1, carId: 1 }));
-  };
 
   return (
     <div className="detail_body">
@@ -38,7 +42,10 @@ function DetailContainer() {
           </h2>
           <div className="detail_subheader">
             <div className="detail_left_subheader">
-              <p>stars and reviews</p>
+              <p>
+                {avgRating === "NaN" ? 0 : avgRating} Stars Average |{" "}
+                {currreviews.length} Reviews
+              </p>
               <p>
                 {singleCar?.city}, {singleCar?.state}, {singleCar?.country}
               </p>
@@ -53,12 +60,13 @@ function DetailContainer() {
               </button>
               {showModel && (
                 <Modal onClose={() => setShowModal(false)}>
-                  <CommentContainer />
+                  <CommentContainer
+                    avgrating={avgRating}
+                    currreview={currreviews.length}
+                  />
                 </Modal>
               )}
               {user?.id && <FavoriteHeart />}
-              {/* <button onClick={addToFav}>Add to Favorite</button>
-              <button>Remove to Favorite</button> */}
             </div>
           </div>
           <ImagesPreview images={singleCar?.Images} />

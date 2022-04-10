@@ -5,14 +5,21 @@ import "./Comments.css";
 import ReviewHolder from "./ReviewHolder";
 import ReviewEditForm from "./ReviewEditForm";
 
-const CommentContainer = () => {
+const CommentContainer = ({ avgrating, currreview }) => {
+  console.log(
+    "🚀 ~ file: CommentContainer.js ~ line 9 ~ CommentContainer ~ avgrating",
+    avgrating
+  );
   const [makeReview, setMakeReview] = useState(false);
   const [reviewMode, setReviewMode] = useState(false);
   const [reviewId, setReviewId] = useState(null);
   return (
     <div className="comment_form_container">
       <div>
-        <h1>* 4.2 # reviews</h1>
+        <h1>
+          {avgrating === "NaN" ? 0 : avgrating} Stars Average | {currreview}{" "}
+          Reviews
+        </h1>
         <button
           onClick={() => {
             setMakeReview(!makeReview);

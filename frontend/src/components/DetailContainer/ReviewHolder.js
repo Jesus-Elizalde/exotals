@@ -18,6 +18,7 @@ const ReviewHolder = ({ setreviewmode, reviewmode, setreviewid }) => {
   return (
     <div className="reviewconatinermodal">
       {Object.values(getAllReviews)
+        .reverse()
         .filter((ele) => ele.carId === +carId)
         .map((ele, i) => (
           <div key={i} className="reviewholdersingler">

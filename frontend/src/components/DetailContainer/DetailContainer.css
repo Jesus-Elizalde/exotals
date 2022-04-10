@@ -23,10 +23,14 @@
 }
 .detail_left_subheader {
   display: flex;
+  width: 380px;
+  justify-content: space-between;
 }
 
 .detail_right_subheader {
   display: flex;
+  width: 160px;
+  justify-content: space-between;
 }
 .image_preview {
   /* border: 1px solid; */

@@ -11,10 +11,6 @@ for (let i = 0; i < cars.length; i++) {
     });
   }
 }
-console.log(
-  "🚀 ~ file: 20220402061626-image-data.js ~ line 5 ~ results",
-  results
-);
 module.exports = {
   up: (queryInterface, Sequelize) => {
     /*
