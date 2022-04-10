@@ -77,6 +77,8 @@ function DetailContainer() {
             <ReviewMainPreview />
             <GoogleMaps
               coords={{ lat: +singleCar?.lat, lng: +singleCar?.lng }}
+              size={{ width: "1100px", height: "400px" }}
+              zoom={true}
             />
           </div>
         </div>

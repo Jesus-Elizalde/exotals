@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import GoogleMaps from "../GoogleMaps";
 
 function NotEditMyCarItem({ data, edit }) {
   const [currentImg, setCurrentImg] = useState(0);
@@ -10,6 +11,8 @@ function NotEditMyCarItem({ data, edit }) {
     country,
     price,
     color,
+    lat,
+    lng,
     description,
     Model,
     Transmisson,
@@ -87,6 +90,11 @@ function NotEditMyCarItem({ data, edit }) {
                 <h2>Country</h2>
                 <p>{country}</p>
               </div>
+              <GoogleMaps
+                coords={{ lat: +lat, lng: +lng }}
+                size={{ width: "7500px", height: "170px" }}
+                zoom={false}
+              />
             </div>
             <div>
               <h2>Description</h2>

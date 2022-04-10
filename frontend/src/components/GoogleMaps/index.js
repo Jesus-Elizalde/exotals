@@ -10,15 +10,15 @@ import "./GoogleMap.css";
 
 import mapStyles from "./mapStyles";
 
-const GoogleMaps = ({ coords }) => {
+const GoogleMaps = ({ coords, size, zoom }) => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: "AIzaSyC5Ug1aGQdp6VDq_7Wv6UQPsSwwCVArWs0",
   });
 
   const containerStyle = {
-    width: "1100px",
-    height: "400px",
+    width: size.width,
+    height: size.height,
   };
 
   const center = {
@@ -29,7 +29,7 @@ const GoogleMaps = ({ coords }) => {
   const options = {
     styles: mapStyles,
     disableDefaultUI: true,
-    zoomControl: true,
+    zoomControl: zoom,
   };
 
   return isLoaded ? (

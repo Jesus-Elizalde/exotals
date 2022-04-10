@@ -21,7 +21,6 @@ async function getCoords(address) {
     coords.lat = res[0].latitude;
     coords.lng = res[0].longitude;
   }
-  console.log(coords, "+++++++++++");
   return coords;
 }
 
