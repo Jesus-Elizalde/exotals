@@ -116,3 +116,11 @@ button:hover {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.countryinfo {
+  margin-right: 15px;
+}
+
+.mapbordercontainer {
+  border: 4px solid lightgray;
+}

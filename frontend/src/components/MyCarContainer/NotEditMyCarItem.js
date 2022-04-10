@@ -86,15 +86,17 @@ function NotEditMyCarItem({ data, edit }) {
               </div>
             </div>
             <div className="mcic-inner-one">
-              <div>
+              <div className="countryinfo">
                 <h2>Country</h2>
                 <p>{country}</p>
               </div>
-              <GoogleMaps
-                coords={{ lat: +lat, lng: +lng }}
-                size={{ width: "7500px", height: "170px" }}
-                zoom={false}
-              />
+              <div className="mapbordercontainer">
+                <GoogleMaps
+                  coords={{ lat: +lat, lng: +lng }}
+                  size={{ width: "250px", height: "170px" }}
+                  zoom={false}
+                />
+              </div>
             </div>
             <div>
               <h2>Description</h2>

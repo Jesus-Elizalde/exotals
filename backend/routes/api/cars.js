@@ -3,6 +3,7 @@ const express = require("express");
 const asyncHandler = require("express-async-handler");
 
 const db = require("../../db/models");
+const { restoreUser } = require("../../utils/auth");
 const router = express.Router();
 
 const getCoords = require("../../utils/geocoder");
@@ -184,8 +185,23 @@ router.put(
 
 router.delete(
   "/:id/delete",
+  restoreUser,
   asyncHandler(async (req, res) => {
     const { id } = req.params;
+    const userId = req.user.id;
+
+    const fav = await db.Favorite.findAll({
+      where: {
+        userId,
+        carId: id,
+      },
+    });
+
+    console.log(fav);
+
+    for (const ele of fav) {
+      await ele.destroy();
+    }
 
     const data = await db.Car.findByPk(id);
 

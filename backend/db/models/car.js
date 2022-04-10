@@ -29,7 +29,11 @@ module.exports = (sequelize, DataTypes) => {
       onDelete: "cascade",
     });
     Car.hasMany(models.Booking, { foreignKey: "carId" });
-    Car.hasMany(models.Review, { foreignKey: "carId" });
+    Car.hasMany(models.Review, {
+      foreignKey: "carId",
+      hooks: true,
+      onDelete: "cascade",
+    });
     Car.belongsTo(models.User, { foreignKey: "userId" });
     Car.belongsTo(models.Model, { foreignKey: "modelId" });
     Car.belongsTo(models.Transmisson, { foreignKey: "transmissonId" });
