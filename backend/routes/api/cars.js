@@ -5,6 +5,8 @@ const asyncHandler = require("express-async-handler");
 const db = require("../../db/models");
 const router = express.Router();
 
+const getCoords = require("../../utils/geocoder");
+
 router.get(
   "/",
   asyncHandler(async (req, res) => {
@@ -45,8 +47,13 @@ router.post(
   "/new",
   asyncHandler(async (req, res) => {
     const formData = req.body;
-
-    const data = await db.Car.build(formData);
+    const newObj = Object.assign({}, req.body);
+    const coordss = await getCoords(
+      `${formData.address} ${formData.city} ${formData.state} ${formData.country}`
+    );
+    newObj.lat = coordss.lat;
+    newObj.lng = coordss.lng;
+    const data = await db.Car.build(newObj);
     if (data) {
       await data.save();
 
@@ -151,6 +158,8 @@ router.put(
       drivetrainId,
     } = req.body;
 
+    const coordss = await getCoords(`${address} ${city} ${state} ${country}`);
+
     if (car) {
       car.address = address;
       car.city = city;
@@ -164,6 +173,7 @@ router.put(
       car.cylinderId = cylinderId;
       car.seatId = seatId;
       car.drivetrainId = drivetrainId;
+      (car.lat = coordss.lat), (car.lng = coordss.lng);
 
       await car.save();
 
