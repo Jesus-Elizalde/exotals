@@ -9,6 +9,7 @@ import CarDetailBook from "./CarDetailBook";
 import CommentContainer from "./CommentContainer.js";
 import ReviewMainPreview from "./ReviewMainPreview";
 import FavoriteHeart from "../FavoriteHeart";
+import GoogleMaps from "../GoogleMaps";
 
 import { addOneFav } from "../../store/favorites";
 
@@ -74,6 +75,9 @@ function DetailContainer() {
           <div>
             <h3>Reviews</h3>
             <ReviewMainPreview />
+            <GoogleMaps
+              coords={{ lat: +singleCar?.lat, lng: +singleCar?.lng }}
+            />
           </div>
         </div>
       </div>

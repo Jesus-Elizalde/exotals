@@ -24,6 +24,13 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING(100),
       },
+      lat: {
+        type: Sequelize.STRING(100),
+      },
+      lng: {
+        type: Sequelize.STRING(100),
+      },
+
       price: {
         allowNull: false,
         type: Sequelize.DECIMAL(1000, 2),

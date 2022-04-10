@@ -7,6 +7,8 @@ module.exports = (sequelize, DataTypes) => {
       city: DataTypes.STRING,
       state: DataTypes.STRING,
       country: DataTypes.STRING,
+      lat: DataTypes.STRING,
+      lng: DataTypes.STRING,
       price: DataTypes.DECIMAL,
       color: DataTypes.STRING,
       description: DataTypes.TEXT,

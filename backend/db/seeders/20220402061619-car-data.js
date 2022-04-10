@@ -1,4 +1,5 @@
 "use strict";
+const getCoords = require("../../utils/geocoder");
 const data = require("../../assests/json/makesandmodelsdb.json");
 const cityData = require("../../assests/json/mega-car_dealers.json");
 
@@ -14,6 +15,8 @@ cars.forEach((ele, i) => {
     city: cityData[i].city,
     state: cityData[i].state,
     country: cityData[i].country,
+    lat: cityData[i].lat,
+    lng: cityData[i].lng,
     description: ele.description,
     price: ele.price,
     color: ele.color,
