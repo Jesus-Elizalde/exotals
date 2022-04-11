@@ -47,3 +47,16 @@ a:active {
   align-items: center;
   height: 550px;
 }
+
+.PageNotFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.pnfbutton {
+  width: 100px;
+  height: 50px;
+}

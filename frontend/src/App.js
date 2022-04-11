@@ -62,9 +62,6 @@ function App() {
             <Route path="/home">
               <HomeContainer />
             </Route>
-            <Route to="/cars/:id">
-              <DetailContainer />
-            </Route>
             <Route path="/mycars">
               {user !== undefined ? (
                 <MyCarContainer />
@@ -72,8 +69,16 @@ function App() {
                 <Redirect to="/welcome" />
               )}
             </Route>
+            <Route path="/cars/:id">
+              <DetailContainer />
+            </Route>
             <Route>
-              <p>page not found</p>
+              <div className="PageNotFound">
+                <h1>Page Not Found!</h1>
+                <a href="/welcome">
+                  <button className="pnfbutton">Exit</button>
+                </a>
+              </div>
             </Route>
           </Switch>
           <Footer />
