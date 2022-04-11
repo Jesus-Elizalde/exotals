@@ -30,7 +30,7 @@ function SignUpPage() {
     <div className="form-container-model">
       <h2>Sign Up</h2>{" "}
       <form onSubmit={handleSubmit}>
-        <ul>
+        <ul className="errorhandlertext">
           {errors.map((error, idx) => (
             <li key={idx}>{error}</li>
           ))}

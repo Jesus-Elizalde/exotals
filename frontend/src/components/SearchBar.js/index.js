@@ -6,7 +6,6 @@ import { ReactComponent as SearchIcon } from "../../svg/searchcar.svg";
 import { ReactComponent as XIcon } from "../../svg/xbutton.svg";
 
 const SearchBar = ({ placeholder, data }) => {
-  console.log("🚀 ~ file: index.js ~ line 9 ~ SearchBar ~ data", data);
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
 

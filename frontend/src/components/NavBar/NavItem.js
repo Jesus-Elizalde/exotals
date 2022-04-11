@@ -5,23 +5,23 @@ import DropdownMenu from "./DropdownMenu";
 function NavItem({ icon, isLoaded }) {
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    if (!open) return;
+  // useEffect(() => {
+  //   if (!open) return;
 
-    const closeMenu = () => {
-      setOpen(false);
-    };
+  //   const closeMenu = () => {
+  //     setOpen(false);
+  //   };
 
-    const timer = setTimeout(
-      () => document.addEventListener("click", closeMenu),
-      5000
-    );
+  //   const timer = setTimeout(
+  //     () => document.addEventListener("click", closeMenu),
+  //     5000
+  //   );
 
-    return () => {
-      clearTimeout(timer);
-      document.removeEventListener("click", closeMenu);
-    };
-  }, [open]);
+  //   return () => {
+  //     clearTimeout(timer);
+  //     document.removeEventListener("click", closeMenu);
+  //   };
+  // }, [open]);
 
   return (
     <li className="nav-item">
