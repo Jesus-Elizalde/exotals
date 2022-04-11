@@ -106,7 +106,7 @@
 
 .xbuttonforcommentmodal {
   position: relative;
-  left: 70px;
+  /* left: 70px; */
   /* bottom: 35px; */
   bottom: 35px;
   font-size: 35px;
