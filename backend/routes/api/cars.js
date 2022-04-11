@@ -195,8 +195,6 @@ router.delete(
       },
     });
 
-    console.log(fav);
-
     for (const ele of fav) {
       await ele.destroy();
     }

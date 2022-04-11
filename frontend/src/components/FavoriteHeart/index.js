@@ -26,8 +26,6 @@ const FavoriteHeart = () => {
     );
 
     setAsyncId(filteredarr[0]?.id);
-
-    console.log(asyncId);
   }, [heartToggle]);
 
   let content;

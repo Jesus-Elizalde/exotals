@@ -2,7 +2,6 @@
 const NodeGeocoder = require("node-geocoder");
 
 async function getCoords(address) {
-  console.log(address, "______-------");
   const coords = {};
   const options = {
     provider: "google",

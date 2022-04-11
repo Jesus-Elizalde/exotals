@@ -13,7 +13,7 @@ const Favlist = () => {
 
   useEffect(() => {
     setSubmitted(false);
-    console.log(submitted);
+
     dispatch(getAllFav);
   }, [submitted]);
 
