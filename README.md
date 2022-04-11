@@ -4,6 +4,7 @@ This is a Clone of [AirBnb](https://www.airbnb.com). Access [Exotals](https://ex
 [Exotals](https://exotals.herokuapp.com/) is the place to go to rent your dream car!
 
 # Index
+| [API Docs](https://github.com/Jesus-Elizalde/exotals/wiki/API-Documentation) | [Database Schema](https://github.com/Jesus-Elizalde/exotals/wiki/Database-Schema) | [Feature List](https://github.com/Jesus-Elizalde/exotals/wiki/Exotals-feature-list) | [Frontend Routes](https://github.com/Jesus-Elizalde/exotals/wiki/Frontend-Routes) |
 
 
 # Technologies Used
