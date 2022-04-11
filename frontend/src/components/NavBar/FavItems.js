@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import Favlist from "./Favlist";
 
-import DropdownMenu from "./DropdownMenu";
-
-function NavItem({ icon, isLoaded }) {
+const FavItems = () => {
   const [open, setOpen] = useState(false);
-
   useEffect(() => {
     if (!open) return;
 
@@ -24,14 +22,11 @@ function NavItem({ icon, isLoaded }) {
   }, [open]);
 
   return (
-    <li className="nav-item">
-      <a className="icon-button" onClick={() => setOpen(!open)}>
-        {icon}
-      </a>
-
-      {open && <DropdownMenu isLoaded={isLoaded} />}
+    <li>
+      <a onClick={() => setOpen(!open)}>Favorites</a>
+      {open && <Favlist />}
     </li>
   );
-}
+};
 
-export default NavItem;
+export default FavItems;

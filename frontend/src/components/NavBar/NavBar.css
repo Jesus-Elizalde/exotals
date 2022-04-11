@@ -83,3 +83,29 @@
   width: 846px;
   justify-content: space-between;
 }
+
+.FavContainerDropdown {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 225px;
+  overflow: none;
+  overflow-y: scroll;
+}
+
+.favdropdown {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  border-bottom: 1px dashed lightgrey;
+}
+.favimglist {
+  margin-right: 10px;
+}
+
+.xbuttonfav {
+  position: absolute;
+  /* left: 110px;
+  bottom: 33px; */
+  right: 17px;
+}

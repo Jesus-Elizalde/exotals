@@ -8,6 +8,7 @@ import SearchBar from "../SearchBar.js";
 
 import "./NavBar.css";
 import { useSelector } from "react-redux";
+import FavItems from "./FavItems";
 
 export default function NavBar({ isLoaded }) {
   const data = useSelector((state) => state.cars.cars);
@@ -26,7 +27,7 @@ export default function NavBar({ isLoaded }) {
             <div className="rightnavbartext">
               <SearchBar placeholder="Enter a Car...." data={dataArr} />
               <a href="/home">Home</a>
-              <a>My Favorites</a>
+              <FavItems />
               <NavItem icon={<ProflieIcon />} isLoaded={isLoaded} />
             </div>
           </>
