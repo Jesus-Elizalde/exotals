@@ -24,7 +24,7 @@ const ReviewHolder = ({ setreviewmode, reviewmode, setreviewid }) => {
           <div key={i} className="reviewholdersingler">
             <div className="reviewholdersinglerheader">
               <div>
-                <h3>{ele.rating}</h3>
+                <h3>Rating : {ele.rating} / 5</h3>
                 <RatingStar rating={ele.rating} />
               </div>
               {user?.id === ele.userId && (
@@ -51,7 +51,14 @@ const ReviewHolder = ({ setreviewmode, reviewmode, setreviewid }) => {
                     </>
                   ) : (
                     <>
-                      <p>Are you sure you want to delete</p>
+                      <p>Are you sure you want to Delete?</p>
+                      <button
+                        onClick={() => {
+                          setDeleteConfirm(false);
+                        }}
+                      >
+                        Cancel
+                      </button>
                       <button
                         type="button"
                         onClick={() => {

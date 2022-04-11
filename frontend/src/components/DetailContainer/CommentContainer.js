@@ -5,11 +5,7 @@ import "./Comments.css";
 import ReviewHolder from "./ReviewHolder";
 import ReviewEditForm from "./ReviewEditForm";
 
-const CommentContainer = ({ avgrating, currreview }) => {
-  console.log(
-    "🚀 ~ file: CommentContainer.js ~ line 9 ~ CommentContainer ~ avgrating",
-    avgrating
-  );
+const CommentContainer = ({ avgrating, currreview, setmodal }) => {
   const [makeReview, setMakeReview] = useState(false);
   const [reviewMode, setReviewMode] = useState(false);
   const [reviewId, setReviewId] = useState(null);
@@ -39,6 +35,9 @@ const CommentContainer = ({ avgrating, currreview }) => {
           setreviewid={setReviewId}
         />
       </div>
+      <p className="xbuttonforcommentmodal" onClick={() => setmodal(false)}>
+        x
+      </p>
     </div>
   );
 };

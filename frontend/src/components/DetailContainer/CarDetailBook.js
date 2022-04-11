@@ -7,6 +7,7 @@ const CarDetailBook = ({ singleCar }) => {
     <div className="detail_box">
       <div className="detail_description_box">
         <h3>Hosted by {singleCar?.User.username}</h3>
+        <h4>Description</h4>
         <p>{singleCar?.description}</p>
         <CarDetailSpec singleCar={singleCar} />
       </div>

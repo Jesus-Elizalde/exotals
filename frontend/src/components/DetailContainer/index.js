@@ -20,6 +20,7 @@ function DetailContainer() {
   const makes = useSelector((state) => state.makes.makes);
   const user = useSelector((state) => state.session.user);
   const reviews = useSelector((state) => state.reviews);
+
   const carId = pathname.split("/").at(-1);
   const singleCar = cars[carId];
 
@@ -62,6 +63,7 @@ function DetailContainer() {
               {showModel && (
                 <Modal onClose={() => setShowModal(false)}>
                   <CommentContainer
+                    setmodal={setShowModal}
                     avgrating={avgRating}
                     currreview={currreviews.length}
                   />
@@ -75,6 +77,11 @@ function DetailContainer() {
           <div>
             <h3>Reviews</h3>
             <ReviewMainPreview />
+            <h3>Address</h3>
+            <h4>
+              {singleCar?.address} {singleCar?.city} {singleCar?.state}{" "}
+              {singleCar?.country}
+            </h4>
             <GoogleMaps
               coords={{ lat: +singleCar?.lat, lng: +singleCar?.lng }}
               size={{ width: "1100px", height: "400px" }}

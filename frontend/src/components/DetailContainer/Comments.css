@@ -23,7 +23,7 @@
   flex-direction: column;
   /* border: 1px solid; */
   width: 530px;
-  height: 222px;
+  height: 305px;
   border-radius: 16px;
   padding: 25px;
   margin: 8px;
@@ -41,4 +41,11 @@
 .reviewconatinermodal {
   height: 500px;
   overflow: scroll;
+}
+.reviewsinglebox {
+  width: 100%;
+
+  height: 240px;
+  overflow: none;
+  overflow-x: scroll;
 }

@@ -20,6 +20,7 @@
 .detail_subheader {
   display: flex;
   justify-content: space-between;
+  margin: 10px;
 }
 .detail_left_subheader {
   display: flex;
@@ -92,7 +93,7 @@
   display: flex;
 }
 .booking_box {
-  border: 1px solid;
+  /* border: 1px solid; */
   border-radius: 10px;
   width: 420px;
   height: 250px;
@@ -101,4 +102,13 @@
 .reviewcontainerpreview {
   display: flex;
   flex-wrap: wrap;
+}
+
+.xbuttonforcommentmodal {
+  position: relative;
+  left: 70px;
+  /* bottom: 35px; */
+  bottom: 35px;
+  font-size: 35px;
+  color: #00c4de;
 }
