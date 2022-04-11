@@ -1,4 +1,40 @@
 "use strict";
+const cars = require("../../assests/json/cars.json");
+const reviews = [
+  { rating: 5, review: "This was a great experience!" },
+  {
+    rating: 4,
+    review:
+      "Drive was great car was a bit stiff and clunky with the transmisson but in speed it is wonderful",
+  },
+  { rating: 2, review: "This takes a lot of gas never again" },
+  {
+    rating: 5,
+    review:
+      "The paint color is mesmerizing, I could stare at this the whole day",
+  },
+  { rating: 5, review: "Car's interior is to die for!" },
+  { rating: 5, review: "Worth every peny!!!" },
+];
+const user = [1, 2, 3, 4];
+
+function randomNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+const results = [];
+
+for (let j = 0; j < cars.length; j++) {
+  for (let i = 0; i < randomNumber(2, reviews.length); i++) {
+    results.push({
+      review: reviews[i].review,
+      rating: reviews[i].rating,
+      userId: user[Math.floor(Math.random() * user.length)],
+      carId: j + 1,
+    });
+  }
+}
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -8,48 +44,7 @@ module.exports = {
 
       Example:
       */
-    return queryInterface.bulkInsert(
-      "Reviews",
-      [
-        {
-          review: "John Doe",
-          rating: 5,
-          userId: 1,
-          carId: 1,
-        },
-        {
-          review: "John",
-          rating: 5,
-          userId: 3,
-          carId: 1,
-        },
-        {
-          review: "Doe",
-          rating: 5,
-          userId: 1,
-          carId: 1,
-        },
-        {
-          review: "John dsdsdsDoe",
-          rating: 1,
-          userId: 1,
-          carId: 1,
-        },
-        {
-          review: "John dsdsdsdsDoe",
-          rating: 3,
-          userId: 2,
-          carId: 1,
-        },
-        {
-          review: "John Doe",
-          rating: 2,
-          userId: 1,
-          carId: 1,
-        },
-      ],
-      {}
-    );
+    return queryInterface.bulkInsert("Reviews", results, {});
   },
 
   down: (queryInterface, Sequelize) => {
