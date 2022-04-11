@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { deleteOneFav } from "../../store/favorites";
+import { deleteOneFav, getAllFav } from "../../store/favorites";
 
 const Favlist = () => {
   const dispatch = useDispatch();
@@ -9,6 +9,13 @@ const Favlist = () => {
   const user = useSelector((state) => state.session.user);
   const favArr = Object.values(fav).filter((ele) => ele?.userId === user?.id);
   const cars = useSelector((state) => state.cars.cars);
+  const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    setSubmitted(false);
+    console.log(submitted);
+    dispatch(getAllFav);
+  }, [submitted]);
 
   return (
     <div className="dropdown FavContainerDropdown">
@@ -21,9 +28,12 @@ const Favlist = () => {
           <a href={`/cars/${ele?.carId}`}>{cars[ele.carId]?.Model.name}</a>
           <a
             className="xbuttonfav"
-            onClick={() =>
-              dispatch(deleteOneFav({ userId: user?.id, carId: ele?.carId }))
-            }
+            onClick={async () => {
+              await dispatch(
+                deleteOneFav({ userId: user?.id, carId: ele?.carId })
+              );
+              setSubmitted(true);
+            }}
           >
             x
           </a>

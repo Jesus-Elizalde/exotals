@@ -11,8 +11,6 @@ import ReviewMainPreview from "./ReviewMainPreview";
 import FavoriteHeart from "../FavoriteHeart";
 import GoogleMaps from "../GoogleMaps";
 
-import { addOneFav } from "../../store/favorites";
-
 import "./DetailContainer.css";
 function DetailContainer() {
   const { pathname } = useLocation();

@@ -62,15 +62,15 @@ function App() {
             <Route path="/home">
               <HomeContainer />
             </Route>
+            <Route to="/cars/:id">
+              <DetailContainer />
+            </Route>
             <Route path="/mycars">
               {user !== undefined ? (
                 <MyCarContainer />
               ) : (
                 <Redirect to="/welcome" />
               )}
-            </Route>
-            <Route to="/cars/:id">
-              <DetailContainer />
             </Route>
             <Route>
               <p>page not found</p>
