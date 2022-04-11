@@ -124,3 +124,24 @@ button:hover {
 .mapbordercontainer {
   border: 4px solid lightgray;
 }
+
+.validmessage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 280px;
+  width: 330px;
+  padding: 10px;
+}
+
+.validotartitlebox {
+  display: flex;
+}
+
+.xvalidotarsholder {
+  position: relative;
+  left: 223px;
+  bottom: 23px;
+  font-size: 25px;
+  color: #00c4de;
+}

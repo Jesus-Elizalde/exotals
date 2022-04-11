@@ -209,7 +209,16 @@ function EditMyCarItem({ data, edit }) {
         <button onClick={() => onSubmit()}>update</button>
         {showModal && (
           <Modal onClose={() => setShowModal(false)}>
-            <div>
+            <div className="validmessage">
+              <div className="validotartitlebox">
+                <h2>Errors:</h2>
+                <p
+                  className="xvalidotarsholder"
+                  onClick={() => setShowModal(false)}
+                >
+                  x
+                </p>
+              </div>
               <ul>
                 {errValidators.map((ele, i) => {
                   return <li key={i}>{ele}</li>;
