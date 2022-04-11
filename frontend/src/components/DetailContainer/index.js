@@ -51,13 +51,15 @@ function DetailContainer() {
               </p>
             </div>
             <div className="detail_right_subheader">
-              <button
-                onClick={() => {
-                  setShowModal(true);
-                }}
-              >
-                add Review
-              </button>
+              {user?.id && (
+                <button
+                  onClick={() => {
+                    setShowModal(true);
+                  }}
+                >
+                  add Review
+                </button>
+              )}
               {showModel && (
                 <Modal onClose={() => setShowModal(false)}>
                   <CommentContainer
