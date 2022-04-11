@@ -18,7 +18,7 @@ const ReviewMainPreview = () => {
           <div key={i} className="reviewholdersingler">
             <div className="reviewholdersinglerheader">
               <div>
-                <h3>{ele.rating}</h3>
+                <h3>Rating : {ele.rating} / 5</h3>
                 <RatingStar rating={ele.rating} />
               </div>
               {/* <div className="revieweditdel">
