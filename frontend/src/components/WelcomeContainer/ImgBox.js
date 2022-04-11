@@ -5,7 +5,7 @@ function ImgBox() {
     <div className="Imgbox">
       <h2 className="Img-title">LET YOUR CURIOSITY DO THE BOOKING</h2>
       <a href="/home" className="Img-button">
-        I'm flexabily
+        I'm flexible
       </a>
     </div>
   );

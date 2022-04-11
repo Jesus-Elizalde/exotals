@@ -12,7 +12,6 @@ function WelcomeContainer() {
       <div className="welomeboxes">
         <DreamBox />
         <ImgBox />
-        <TripBox />
       </div>
       <div className="welcomebackground"></div>
     </div>
