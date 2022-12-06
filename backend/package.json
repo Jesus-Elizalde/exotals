@@ -9,7 +9,14 @@
     "start": "per-env",
     "start:development": "nodemon -r dotenv/config ./bin/www",
     "start:production": "node ./bin/www",
-    "build": "echo 'Building....'"
+    "build": "echo 'Building....'",
+    "db:create": "npx dotenv sequelize db:create",
+    "db:migrate": "npx dotenv sequelize db:migrate",
+    "db:migrate:undo": "npx dotenv sequelize db:migrate:undo:all",
+    "db:seed:all": "npx dotenv sequelize db:seed:all",
+    "db:seed:undo": "npx dotenv sequelize db:seed:undo",
+    "db:seed:undo:all": "npx dotenv sequelize db:seed:undo:all",
+    "db:reset": "npx dotenv sequelize db:seed:undo:all && npx dotenv sequelize db:migrate:undo:all && npx dotenv sequelize db:migrate && npx dotenv sequelize db:seed:all"
   },
   "keywords": [],
   "author": "",
